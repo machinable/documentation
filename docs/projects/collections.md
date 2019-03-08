@@ -1,7 +1,7 @@
-# About
+# Collections
 
-# Manage Collections
+## Manage Collections
 
-# Querying Data
+## Querying Data
 
-# Configure Access
+## Configure Access

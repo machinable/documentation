@@ -1,7 +1,7 @@
-# About
+# API Resources
 
-# Manage Resources
+## Manage Resources
 
-# Querying Data
+## Querying Data
 
-# Configure Access
+## Configure Access

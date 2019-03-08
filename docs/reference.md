@@ -1,4 +1,6 @@
-# JSON Schema
+# Reference
+
+## JSON Schema
 
 Machinable API Resource properties are defined with JSON Schema. This section provides helpful information and quick links on the topic of JSON Schema.
 
@@ -6,11 +8,11 @@ JSON Schema is a vocabulary that allows you to annotate and validate JSON docume
 
 For more information about the JSON Schema specification, refer to [https://json-schema.org](https://json-schema.org).
 
-**Examples**
+### Examples
 
 These examples are meant to give you a high level idea of how to structure your data types in Machinable.
 
-Person Schema:
+#### Person Schema
 
 ```json
 {
@@ -62,7 +64,7 @@ Person Schema:
 }
 ```
 
-Person sample datum:
+Person sample data:
 
 ```json
 {
