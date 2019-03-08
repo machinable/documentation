@@ -1,0 +1,114 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "Welcome to Machinable!\n\n\nMachinable gives developers the ability to create API Resources and Collections to store data in a structured, validated, RESTful way without having to write any backend code.", 
+            "title": "Home"
+        }, 
+        {
+            "location": "/#welcome-to-machinable", 
+            "text": "Machinable gives developers the ability to create API Resources and Collections to store data in a structured, validated, RESTful way without having to write any backend code.", 
+            "title": "Welcome to Machinable!"
+        }, 
+        {
+            "location": "/projects/resources/", 
+            "text": "About\n\n\nManage Resources\n\n\nQuerying Data\n\n\nConfigure Access", 
+            "title": "API Resources"
+        }, 
+        {
+            "location": "/projects/resources/#about", 
+            "text": "", 
+            "title": "About"
+        }, 
+        {
+            "location": "/projects/resources/#manage-resources", 
+            "text": "", 
+            "title": "Manage Resources"
+        }, 
+        {
+            "location": "/projects/resources/#querying-data", 
+            "text": "", 
+            "title": "Querying Data"
+        }, 
+        {
+            "location": "/projects/resources/#configure-access", 
+            "text": "", 
+            "title": "Configure Access"
+        }, 
+        {
+            "location": "/projects/collections/", 
+            "text": "About\n\n\nManage Collections\n\n\nQuerying Data\n\n\nConfigure Access", 
+            "title": "Collections"
+        }, 
+        {
+            "location": "/projects/collections/#about", 
+            "text": "", 
+            "title": "About"
+        }, 
+        {
+            "location": "/projects/collections/#manage-collections", 
+            "text": "", 
+            "title": "Manage Collections"
+        }, 
+        {
+            "location": "/projects/collections/#querying-data", 
+            "text": "", 
+            "title": "Querying Data"
+        }, 
+        {
+            "location": "/projects/collections/#configure-access", 
+            "text": "", 
+            "title": "Configure Access"
+        }, 
+        {
+            "location": "/projects/access/", 
+            "text": "About\n\n\nUsers\n\n\nAPI Keys", 
+            "title": "Access"
+        }, 
+        {
+            "location": "/projects/access/#about", 
+            "text": "", 
+            "title": "About"
+        }, 
+        {
+            "location": "/projects/access/#users", 
+            "text": "", 
+            "title": "Users"
+        }, 
+        {
+            "location": "/projects/access/#api-keys", 
+            "text": "", 
+            "title": "API Keys"
+        }, 
+        {
+            "location": "/projects/security/", 
+            "text": "About\n\n\nLogs\n\n\nSessions", 
+            "title": "Security"
+        }, 
+        {
+            "location": "/projects/security/#about", 
+            "text": "", 
+            "title": "About"
+        }, 
+        {
+            "location": "/projects/security/#logs", 
+            "text": "", 
+            "title": "Logs"
+        }, 
+        {
+            "location": "/projects/security/#sessions", 
+            "text": "", 
+            "title": "Sessions"
+        }, 
+        {
+            "location": "/reference/", 
+            "text": "Reference", 
+            "title": "Reference"
+        }, 
+        {
+            "location": "/about/", 
+            "text": "Machinable is a project maintained by Nick Sjostrom.", 
+            "title": "About"
+        }
+    ]
+}
