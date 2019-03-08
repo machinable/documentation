@@ -1,0 +1,15 @@
+site_name: Machinable
+site_url: https://machinable.io
+repo_url: https://github.com/machinable/documentation
+repo_name: 'GitHub'
+site_author: Nick Sjostrom
+pages:
+  - Home: index.md
+  - Projects:
+    - 'API Resources': 'projects/resources.md'
+    - 'Collections': 'projects/collections.md'
+    - 'Access': 'projects/access.md'
+    - 'Security': 'projects/security.md'
+  - Reference: reference.md
+  - About: about.md
+theme: readthedocs
