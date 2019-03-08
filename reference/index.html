@@ -80,6 +80,9 @@
     <a class="current" href="./">Reference</a>
     <ul class="subnav">
             
+    <li class="toctree-l2"><a href="#json-schema">JSON Schema</a></li>
+    
+
     </ul>
 	    </li>
           
@@ -123,7 +126,83 @@
           <div role="main">
             <div class="section">
               
-                <p>Reference</p>
+                <h1 id="json-schema">JSON Schema</h1>
+<p>Machinable API Resource properties are defined with JSON Schema. This section provides helpful information and quick links on the topic of JSON Schema.</p>
+<p>JSON Schema is a vocabulary that allows you to annotate and validate JSON documents. <a href="https://json-schema.org/understanding-json-schema/">Understanding JSON Schema</a> is a great reference for those that want to understand the basics of JSON Schema, without diving into the technical specification.</p>
+<p>For more information about the JSON Schema specification, refer to <a href="https://json-schema.org">https://json-schema.org</a>.</p>
+<p><strong>Examples</strong></p>
+<p>These examples are meant to give you a high level idea of how to structure your data types in Machinable.</p>
+<p>Person Schema:</p>
+<pre><code class="json">{
+    &quot;firstName&quot;: {
+        &quot;type&quot;: &quot;string&quot;,
+        &quot;description&quot;: &quot;The person's first name.&quot;
+    },
+    &quot;lastName&quot;: {
+        &quot;type&quot;: &quot;string&quot;,
+        &quot;description&quot;: &quot;The person's last name.&quot;
+    },
+    &quot;age&quot;: {
+        &quot;description&quot;: &quot;Age in years which must be equal to or greater than zero.&quot;,
+        &quot;type&quot;: &quot;integer&quot;,
+        &quot;minimum&quot;: 0
+    },
+    &quot;birthDate&quot;: {
+        &quot;description&quot;: &quot;The date of this person's birth, represented by a RFC3339 formated date-time string&quot;,
+        &quot;format&quot;: &quot;date-time&quot;,
+        &quot;type&quot;: &quot;string&quot;
+    },
+    &quot;friends&quot;: {
+        &quot;description&quot;: &quot;A list of this person's friends&quot;,
+        &quot;items&quot;: {
+            &quot;type&quot;: &quot;string&quot;
+        },
+        &quot;type&quot;: &quot;array&quot;
+    },
+    &quot;profession&quot;: {
+        &quot;description&quot;: &quot;The profession of this person. What they do for a career or their lifestyle.&quot;,
+        &quot;type&quot;: &quot;object&quot;,
+        &quot;properties&quot;: {
+            &quot;title&quot;: {
+                &quot;type&quot;: &quot;string&quot;
+            },
+            &quot;years&quot;: {
+                &quot;type&quot;: &quot;number&quot;,
+                &quot;description&quot;: &quot;The number of years this person has spent with this profession&quot;
+            },
+            &quot;responsibilites&quot;: {
+                &quot;description&quot;: &quot;A list of this profession's responsibilities&quot;,
+                &quot;items&quot;: {
+                    &quot;type&quot;: &quot;string&quot;
+                },
+                &quot;type&quot;: &quot;array&quot;
+            }
+        }
+    }
+}
+</code></pre>
+
+<p>Person sample datum:</p>
+<pre><code class="json">{
+    &quot;firstName&quot;: &quot;Jonathan&quot;,
+    &quot;lastName&quot;: &quot;Gilmore&quot;,
+    &quot;age&quot;: 29,
+    &quot;birthDate&quot;: &quot;1989-07-20T04:00:00Z&quot;,
+    &quot;friends&quot;: [
+        &quot;Renee Scott&quot;,
+        &quot;Mrs. Brenda Harris&quot;,
+        &quot;Charles Miller&quot;,
+        &quot;Marc Webb&quot;
+    ],
+    &quot;profession&quot;: {
+        &quot;title&quot;: &quot;Lumberjack&quot;,
+        &quot;years&quot;: 10.5,
+        &quot;responsibilites&quot;: [
+            &quot;North American workers in the logging industry who perform the initial harvesting and transport of trees for ultimate processing into forest products.&quot;
+        ]
+    }
+}
+</code></pre>
               
             </div>
           </div>
