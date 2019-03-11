@@ -3,14 +3,13 @@ site_url: https://machinable.io
 repo_url: https://github.com/machinable
 repo_name: 'machinable'
 site_author: Nick Sjostrom
+# Copyright
+copyright: 'Copyright &copy; 2018 - 2019 Nick Sjostrom'
 nav:
-  - Getting Started: 
-    - 'Machinable': 'getting_started/index.md'
-    - 'Getting Started': 'getting_started/getting_started.md'
-    - 'Release Notes':
-      - 'Machinable API': 'getting_started/release_notes_api.md'
-      - 'Machinable UI': 'getting_started/release_notes_ui.md'
-    - "About": 'getting_started/about.md'
+  - Overview: 'index.md'
+  - Getting Started: 'getting_started.md'
+  - Release Notes: 'release_notes.md'
+  - About: 'about.md'
   - Projects:
     - 'API Resources': 'projects/resources.md'
     - 'Collections': 'projects/collections.md'
