@@ -1,4 +1,4 @@
-# user-documentation
-Documentation for users of https://machinable.io
+## Machinable Documentation
+[Machinable](https://machinable.io) user/api documentation.
 
-Hosted at https://machinable.github.io/documentation/getting_started/
+https://machinable.github.io/documentation/
