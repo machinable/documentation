@@ -1,13 +1,13 @@
 
 ```bash tab="Bash"
 curl -X GET \
-  https://pet-demo.machinable.io/collections/dogs
+  "https://pet-demo.machinable.io/collections/dogs?_limit=1"
 ```
 
 ```python tab="Python"
 import requests
 
-url = "https://pet-demo.machinable.io/collections/dogs"
+url = "https://pet-demo.machinable.io/collections/dogs?_limit=1"
 
 headers = {}
 
@@ -27,7 +27,7 @@ xhr.addEventListener("readystatechange", function () {
   }
 });
 
-xhr.open("GET", "https://pet-demo.machinable.io/collections/dogs");
+xhr.open("GET", "https://pet-demo.machinable.io/collections/dogs?_limit=1");
 
 xhr.send(data);
 ```
@@ -43,7 +43,7 @@ import (
 
 func main() {
 
-	url := "https://pet-demo.machinable.io/collections/dogs"
+	url := "https://pet-demo.machinable.io/collections/dogs?_limit=1"
 
 	req, _ := http.NewRequest("GET", url, nil)
 
@@ -74,21 +74,11 @@ Successful response:
       "breed": "French Bulldog",
       "id": "5c8694e3a7748bb224833f51",
       "name": "Murphy"
-    },
-    {
-      "_metadata": {
-        "created": 1552326051,
-        "creator": "anonymous",
-        "creator_type": "anonymous"
-      },
-      "age": 7,
-      "breed": "German Shephard",
-      "id": "5c869da3a7748bb224833f5c",
-      "name": "Max"
     }
   ],
   "links": {
-    "self": "http://pet-demo.machinable.io/collections/dogs?_limit=10&_offset=0"
+    "self": "http://pet-demo.machinable.io/collections/dogs?_limit=1&_offset=0",
+    "next": "http://pet-demo.machinable.io/collections/dogs?_limit=1&_offset=1"
   }
 }
 ```

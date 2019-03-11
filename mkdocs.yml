@@ -20,6 +20,7 @@ nav:
     - 'Manage Data': 'querying_data/crud.md'
     - 'Pagination': 'querying_data/pagination.md'
     - 'Filtering': 'querying_data/filtering.md'
+    - 'Sorting': 'querying_data/sorting.md'
   - Account:
     - 'Contact': 'account/contact.md'
     - 'Password Reset': 'account/password.md'
