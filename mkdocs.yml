@@ -17,7 +17,7 @@ nav:
     - 'Security': 'projects/security.md'
     - 'Settings': 'projects/settings.md'
   - Querying:
-    - 'CRUD': 'querying_data/crud.md'
+    - 'Manage Data': 'querying_data/crud.md'
     - 'Pagination': 'querying_data/pagination.md'
     - 'Filtering': 'querying_data/filtering.md'
   - Account:
@@ -40,3 +40,13 @@ theme:
     primary: 'blue grey'
 extra_css:
   - 'styles.css'
+markdown_extensions:  
+  - markdown.extensions.admonition
+  - markdown.extensions.codehilite:
+      guess_lang: false
+      linenums: true
+  - pymdownx.superfences
+  - markdown_include.include:
+      base_path: docs
+  - markdown.extensions.toc:
+      permalink: true
