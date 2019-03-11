@@ -38,9 +38,9 @@ Once you have filled out the form, click 'Create'. Your project is now ready to 
 
 ## What's Next?
 
-1. [Create an API Resource](/projects/resources/)
-2. [Manage Collections](/projects/collections/)
-3. [Create and query some data](/querying_data/crud/)
-4. [Create an application that uses your Machinable project](/reference/sample_projects/)
+1. [Create an API Resource](/documentation/projects/resources/)
+2. [Manage Collections](/documentation/projects/collections/)
+3. [Create and query some data](/documentation/querying_data/crud/)
+4. [Create an application that uses your Machinable project](/documentation/reference/sample_projects/)
 
 <br/>
