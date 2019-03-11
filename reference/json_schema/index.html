@@ -487,8 +487,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../querying_data/crud/" title="CRUD" class="md-nav__link">
-      CRUD
+    <a href="../../querying_data/crud/" title="Manage Data" class="md-nav__link">
+      Manage Data
     </a>
   </li>
 
@@ -814,83 +814,149 @@
                   <a href="https://github.com/machinable/edit/master/docs/reference/json_schema.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="json-schema">JSON Schema</h1>
+                <h1 id="json-schema">JSON Schema<a class="headerlink" href="#json-schema" title="Permanent link">&para;</a></h1>
 <p>Machinable API Resource properties are defined with JSON Schema. This section provides helpful information and quick links on the topic of JSON Schema.</p>
 <p>JSON Schema is a vocabulary that allows you to annotate and validate JSON documents. <a href="https://json-schema.org/understanding-json-schema/">Understanding JSON Schema</a> is a great reference for those that want to understand the basics of JSON Schema, without diving into the technical specification.</p>
 <p>For more information about the JSON Schema specification, refer to <a href="https://json-schema.org">https://json-schema.org</a>.</p>
-<h3 id="examples">Examples</h3>
+<h3 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h3>
 <p>These examples are meant to give you a high level idea of how to structure your data types in Machinable.</p>
-<h4 id="person-schema">Person Schema</h4>
-<pre><code class="json">{
-    &quot;firstName&quot;: {
-        &quot;type&quot;: &quot;string&quot;,
-        &quot;description&quot;: &quot;The person's first name.&quot;
-    },
-    &quot;lastName&quot;: {
-        &quot;type&quot;: &quot;string&quot;,
-        &quot;description&quot;: &quot;The person's last name.&quot;
-    },
-    &quot;age&quot;: {
-        &quot;description&quot;: &quot;Age in years which must be equal to or greater than zero.&quot;,
-        &quot;type&quot;: &quot;integer&quot;,
-        &quot;minimum&quot;: 0
-    },
-    &quot;birthDate&quot;: {
-        &quot;description&quot;: &quot;The date of this person's birth, represented by a RFC3339 formated date-time string&quot;,
-        &quot;format&quot;: &quot;date-time&quot;,
-        &quot;type&quot;: &quot;string&quot;
-    },
-    &quot;friends&quot;: {
-        &quot;description&quot;: &quot;A list of this person's friends&quot;,
-        &quot;items&quot;: {
-            &quot;type&quot;: &quot;string&quot;
-        },
-        &quot;type&quot;: &quot;array&quot;
-    },
-    &quot;profession&quot;: {
-        &quot;description&quot;: &quot;The profession of this person. What they do for a career or their lifestyle.&quot;,
-        &quot;type&quot;: &quot;object&quot;,
-        &quot;properties&quot;: {
-            &quot;title&quot;: {
-                &quot;type&quot;: &quot;string&quot;
-            },
-            &quot;years&quot;: {
-                &quot;type&quot;: &quot;number&quot;,
-                &quot;description&quot;: &quot;The number of years this person has spent with this profession&quot;
-            },
-            &quot;responsibilites&quot;: {
-                &quot;description&quot;: &quot;A list of this profession's responsibilities&quot;,
-                &quot;items&quot;: {
-                    &quot;type&quot;: &quot;string&quot;
-                },
-                &quot;type&quot;: &quot;array&quot;
-            }
-        }
-    }
-}
-</code></pre>
+<h4 id="person-schema">Person Schema<a class="headerlink" href="#person-schema" title="Permanent link">&para;</a></h4>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;firstName&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The person&#39;s first name.&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;lastName&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The person&#39;s last name.&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;age&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Age in years which must be equal to or greater than zero.&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;integer&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;minimum&quot;</span><span class="p">:</span> <span class="mi">0</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;birthDate&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The date of this person&#39;s birth, represented by a RFC3339 formated date-time string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;format&quot;</span><span class="p">:</span> <span class="s2">&quot;date-time&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;friends&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;A list of this person&#39;s friends&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;profession&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The profession of this person. What they do for a career or their lifestyle.&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;years&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;number&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The number of years this person has spent with this profession&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;responsibilites&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;A list of this profession&#39;s responsibilities&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
 
 <p>Person sample data:</p>
-<pre><code class="json">{
-    &quot;firstName&quot;: &quot;Jonathan&quot;,
-    &quot;lastName&quot;: &quot;Gilmore&quot;,
-    &quot;age&quot;: 29,
-    &quot;birthDate&quot;: &quot;1989-07-20T04:00:00Z&quot;,
-    &quot;friends&quot;: [
-        &quot;Renee Scott&quot;,
-        &quot;Mrs. Brenda Harris&quot;,
-        &quot;Charles Miller&quot;,
-        &quot;Marc Webb&quot;
-    ],
-    &quot;profession&quot;: {
-        &quot;title&quot;: &quot;Lumberjack&quot;,
-        &quot;years&quot;: 10.5,
-        &quot;responsibilites&quot;: [
-            &quot;North American workers in the logging industry who perform the initial harvesting and transport of trees for ultimate processing into forest products.&quot;
-        ]
-    }
-}
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;firstName&quot;</span><span class="p">:</span> <span class="s2">&quot;Jonathan&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;lastName&quot;</span><span class="p">:</span> <span class="s2">&quot;Gilmore&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;age&quot;</span><span class="p">:</span> <span class="mi">29</span><span class="p">,</span>
+    <span class="nt">&quot;birthDate&quot;</span><span class="p">:</span> <span class="s2">&quot;1989-07-20T04:00:00Z&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;friends&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;Renee Scott&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Mrs. Brenda Harris&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Charles Miller&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Marc Webb&quot;</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;profession&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Lumberjack&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;years&quot;</span><span class="p">:</span> <span class="mf">10.5</span><span class="p">,</span>
+        <span class="nt">&quot;responsibilites&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;North American workers in the logging industry who perform the initial harvesting and transport of trees for ultimate processing into forest products.&quot;</span>
+        <span class="p">]</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
                 
                   
                 
