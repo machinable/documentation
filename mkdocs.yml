@@ -1,16 +1,43 @@
 site_name: Machinable
 site_url: https://machinable.io
-repo_url: https://github.com/machinable/documentation
-repo_name: 'machinable / documentation'
+repo_url: https://github.com/machinable
+repo_name: 'machinable'
 site_author: Nick Sjostrom
 nav:
-  - Home: index.md
+  - Getting Started: 
+    - 'Machinable': 'getting_started/index.md'
+    - 'Getting Started': 'getting_started/getting_started.md'
+    - 'Release Notes':
+      - 'Machinable API': 'getting_started/release_notes_api.md'
+      - 'Machinable UI': 'getting_started/release_notes_ui.md'
+    - "About": 'getting_started/about.md'
   - Projects:
     - 'API Resources': 'projects/resources.md'
     - 'Collections': 'projects/collections.md'
     - 'Access': 'projects/access.md'
     - 'Security': 'projects/security.md'
-  - Reference: reference.md
-  - About: about.md
+    - 'Settings': 'projects/settings.md'
+  - Querying:
+    - 'CRUD': 'querying_data/crud.md'
+    - 'Pagination': 'querying_data/pagination.md'
+    - 'Filtering': 'querying_data/filtering.md'
+  - Account:
+    - 'Contact': 'account/contact.md'
+    - 'Password Reset': 'account/password.md'
+    - 'Billing & Plans': 'account/billing.md'
+    - 'Security': 'account/security.md'
+    - 'API Keys': 'account/apikeys.md'
+    - 'Support': 'account/support.md'
+  - Reference:
+    - 'JSON Schema': 'reference/json_schema.md'
+    - 'Sample Projects': 'reference/sample_projects.md'
+  - API:
+    - 'Machinable API': 'api/introduction.md'
 theme: 
   name: 'material'
+  feature:
+    tabs: true
+  palette:
+    primary: 'blue grey'
+extra_css:
+  - 'styles.css'

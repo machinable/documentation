@@ -1,6 +1,4 @@
-# Reference
-
-## JSON Schema
+# JSON Schema
 
 Machinable API Resource properties are defined with JSON Schema. This section provides helpful information and quick links on the topic of JSON Schema.
 
