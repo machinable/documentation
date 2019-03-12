@@ -72,9 +72,9 @@ Successful response:
 
 {
     "_metadata": {
-    "created": 1552326051,
-    "creator": "anonymous",
-    "creator_type": "anonymous"
+      "created": 1552326051,
+      "creator": "anonymous",
+      "creator_type": "anonymous"
     },
     "age": 9,
     "breed": "German Shephard",

@@ -1,6 +1,6 @@
 ## Welcome to Machinable!
 
-Machinable gives developers the ability to create API Resources and Collections to store data in a structured, validated, RESTful way without having to write any backend code.
+Machinable gives developers the ability to store and manage their application's data in a structured, validated, RESTful way without having to write any backend code.
 
 ### ![machinable screenshot](images/browser.png)
 
