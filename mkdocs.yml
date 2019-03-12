@@ -21,18 +21,18 @@ nav:
     - 'Pagination': 'querying_data/pagination.md'
     - 'Filtering': 'querying_data/filtering.md'
     - 'Sorting': 'querying_data/sorting.md'
-  - Account:
-    - 'Contact': 'account/contact.md'
-    - 'Password Reset': 'account/password.md'
-    - 'Billing & Plans': 'account/billing.md'
-    - 'Security': 'account/security.md'
-    - 'API Keys': 'account/apikeys.md'
-    - 'Support': 'account/support.md'
+  # - Account:
+  #   - 'Contact': 'account/contact.md'
+  #   - 'Password Reset': 'account/password.md'
+  #   - 'Billing & Plans': 'account/billing.md'
+  #   - 'Security': 'account/security.md'
+  #   - 'API Keys': 'account/apikeys.md'
+  #   - 'Support': 'account/support.md'
   - Reference:
     - 'JSON Schema': 'reference/json_schema.md'
-    - 'Sample Projects': 'reference/sample_projects.md'
-  - API:
-    - 'Machinable API': 'api/introduction.md'
+    # - 'Sample Projects': 'reference/sample_projects.md'
+  # - API:
+  #   - 'Machinable API': 'api/introduction.md'
 theme: 
   name: 'material'
   feature:

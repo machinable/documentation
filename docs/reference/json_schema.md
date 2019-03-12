@@ -6,11 +6,40 @@ JSON Schema is a vocabulary that allows you to annotate and validate JSON docume
 
 For more information about the JSON Schema specification, refer to [https://json-schema.org](https://json-schema.org).
 
-### Examples
+### Example Schemas
 
 These examples are meant to give you a high level idea of how to structure your data types in Machinable.
 
-#### Person Schema
+#### Dog
+
+```json
+{
+  "age": {
+    "description": "Age, in human years, of the dog.",
+    "type": "integer"
+  },
+  "breed": {
+    "description": "The breed of the dog.",
+    "type": "string"
+  },
+  "name": {
+    "description": "The name of the dog.",
+    "type": "string"
+  }
+}
+```
+
+Dog sample data:
+
+```json
+{
+    "age": 2,
+    "breed": "French Bulldog",
+    "name": "Murphy"
+}
+```
+
+#### Person
 
 ```json
 {
