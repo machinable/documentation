@@ -800,7 +800,7 @@
 <p>The User's Access will determine how they can interact with the data. <code>Read</code> will allow the User to Get and List objects. <code>Write</code> will allow the User to Create, Edit, and Delete objects.</p>
 <h3 id="edit-user">Edit User<a class="headerlink" href="#edit-user" title="Permanent link">&para;</a></h3>
 <p>To edit a User's Role &amp; Access, click the ellipsis button for that user and select <code>Edit Access</code>.</p>
-<p><img alt="edit users" src="/images/edit_user.png" title="Edit User" /></p>
+<p><img alt="edit users" src="../../images/edit_user.png" title="Edit User" /></p>
 <h3 id="authentication">Authentication<a class="headerlink" href="#authentication" title="Permanent link">&para;</a></h3>
 <p>In order to make authenticated requests to API Resources and Collections, Project Users will need an access token.</p>
 <p>First, the user will need to obtain a session. To do that, make an <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication#Basic_authentication_scheme">HTTP Basic authentication</a> request to your project's <code>/sessions</code> endpoint. This will return an <code>access_token</code> and a <code>refresh_token</code> in the form of <a href="https://jwt.io/">JSON Web Tokens</a>:</p>
@@ -1103,9 +1103,9 @@ $ curl -X POST <span class="se">\</span>
 <p>Project API Keys are intended to be used by other software/machines. They can be useful if you want to proxy user requests, automatically manage data, or run tests against Machinable.</p>
 <h3 id="create-api-key">Create API Key<a class="headerlink" href="#create-api-key" title="Permanent link">&para;</a></h3>
 <p>To create a new Project API Key navigate to your Project's <code>Access &gt; API Keys</code> page.</p>
-<p><img alt="empty api keys" src="/images/empty_keys.png" title="No API Keys" /></p>
+<p><img alt="empty api keys" src="../../images/empty_keys.png" title="No API Keys" /></p>
 <p>Click the <code>Generate API Token</code> button to open the new API Key modal and enter the API Key's information.</p>
-<p><img alt="new api keys" src="/images/new_apikey.png" title="New API Key" /></p>
+<p><img alt="new api keys" src="../../images/new_apikey.png" title="New API Key" /></p>
 <p><strong>Generated Key</strong></p>
 <p>This is the automatically generated API Key. Be sure to copy the API Key and save it somewhere safe as you will not be able to view it again.</p>
 <p><strong>Description</strong></p>
@@ -1116,7 +1116,7 @@ $ curl -X POST <span class="se">\</span>
 <p>The API Key's Access will determine how it can interact with the data. <code>Read</code> will allow the API Key to Get and List objects. <code>Write</code> will allow the API Key to Create, Edit, and Delete objects.</p>
 <h3 id="edit-api-key">Edit API Key<a class="headerlink" href="#edit-api-key" title="Permanent link">&para;</a></h3>
 <p>To edit an API Key's Role &amp; Access, click the ellipsis button for that API Key and select <code>Edit Access</code>.</p>
-<p><img alt="edit api keys" src="/images/edit_apikey.png" title="Edit API Key" /></p>
+<p><img alt="edit api keys" src="../../images/edit_apikey.png" title="Edit API Key" /></p>
 <h3 id="authentication_1">Authentication<a class="headerlink" href="#authentication_1" title="Permanent link">&para;</a></h3>
 <p>To make authenticated requests with a Project API Key, add the <code>Authorization</code> header with the <code>apikey</code> text to each request:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Authorization: apikey <span class="o">{</span>api_key_string<span class="o">}</span>
