@@ -66,47 +66,7 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://machinable.io/account/contact/</loc>
-     <lastmod>2019-03-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://machinable.io/account/password/</loc>
-     <lastmod>2019-03-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://machinable.io/account/billing/</loc>
-     <lastmod>2019-03-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://machinable.io/account/security/</loc>
-     <lastmod>2019-03-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://machinable.io/account/apikeys/</loc>
-     <lastmod>2019-03-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://machinable.io/account/support/</loc>
-     <lastmod>2019-03-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
      <loc>https://machinable.io/reference/json_schema/</loc>
-     <lastmod>2019-03-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://machinable.io/reference/sample_projects/</loc>
-     <lastmod>2019-03-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://machinable.io/api/introduction/</loc>
      <lastmod>2019-03-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
