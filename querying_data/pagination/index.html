@@ -1159,13 +1159,14 @@
 </td></tr></table></p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
+<p>The <code>_limit</code> query parameter is a reserved field that cannot be used in API Resource or Collection data fields.</p>
 <p>The <code>_limit</code> query parameter has the following constraints:</p>
 <p>Maximum: 100 <br/>
 Minimum: 1 <br/>
 Default: 10 <br/></p>
 </div>
 <h3 id="offset">Offset<a class="headerlink" href="#offset" title="Permanent link">&para;</a></h3>
-<p><code>_limit</code> is a query parameter that can be used to specify how many results to skip before the response payload is built and returned. If we take a look at our sample request above, we'll see that we are not specifying an offset, so Machinable will default the offset to 0, giving us the first page of the results.</p>
+<p><code>_offset</code> is a query parameter that can be used to specify how many results to skip before the response payload is built and returned. If we take a look at our sample request above, we'll see that we are not specifying an offset, so Machinable will default the offset to 0, giving us the first page of the results.</p>
 <p>If we continue to build off of the request in our example and provide an <code>_offset</code> of <code>1</code> with a <code>_limit</code> of <code>1</code>, we will get the second "page" of results. Since there are only <code>2</code> dogs in the collection, the second page will be the last page:</p>
 <div class="superfences-tabs">
 <input name="__tabs_3" type="radio" id="__tab_3_0" checked="checked" />
@@ -1321,6 +1322,7 @@ Default: 10 <br/></p>
 </td></tr></table></p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
+<p>The <code>_offset</code> query parameter is a reserved field that cannot be used in API Resource or Collection data fields.</p>
 <p>The <code>_offset</code> query parameter has the following constraints:</p>
 <p>Minimum: 0 <br/>
 Default: 0 <br/></p>
