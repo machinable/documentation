@@ -32,7 +32,7 @@ nav:
   #   - 'Support': 'account/support.md'
   - Reference:
     - 'JSON Schema': 'reference/json_schema.md'
-    # - 'Sample Projects': 'reference/sample_projects.md'
+    - 'Sample Projects': 'reference/sample_projects.md'
   # - API:
   #   - 'Machinable API': 'api/introduction.md'
 theme: 
