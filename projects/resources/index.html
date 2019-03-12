@@ -410,6 +410,33 @@
     Manage Resources
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-new-api-resource" title="Create a new API Resource" class="md-nav__link">
+    Create a new API Resource
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-details" title="View Details" class="md-nav__link">
+    View Details
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-access" title="Configure Access" class="md-nav__link">
+    Configure Access
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -417,12 +444,18 @@
     Querying Data
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configure-access" title="Configure Access" class="md-nav__link">
-    Configure Access
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#possible-errors" title="Possible Errors" class="md-nav__link">
+    Possible Errors
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -557,6 +590,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../querying_data/errors/" title="Error Codes" class="md-nav__link">
+      Error Codes
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -623,6 +668,33 @@
     Manage Resources
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-new-api-resource" title="Create a new API Resource" class="md-nav__link">
+    Create a new API Resource
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-details" title="View Details" class="md-nav__link">
+    View Details
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-access" title="Configure Access" class="md-nav__link">
+    Configure Access
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -630,12 +702,18 @@
     Querying Data
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configure-access" title="Configure Access" class="md-nav__link">
-    Configure Access
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#possible-errors" title="Possible Errors" class="md-nav__link">
+    Possible Errors
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -659,9 +737,107 @@
                 
                 
                 <h1 id="api-resources">API Resources<a class="headerlink" href="#api-resources" title="Permanent link">&para;</a></h1>
+<p>API Resources are endpoints which store JSON Objects that are described and validated by <a href="/documentation/reference/json_schema/">JSON Schema</a>. This gives you the ability to create API endpoints that will validate the data being saved to it without writing any code.</p>
 <h2 id="manage-resources">Manage Resources<a class="headerlink" href="#manage-resources" title="Permanent link">&para;</a></h2>
+<h3 id="create-a-new-api-resource">Create a new API Resource<a class="headerlink" href="#create-a-new-api-resource" title="Permanent link">&para;</a></h3>
+<p>To create a new API Resource, navigate to your Project's <code>API</code> page and click the <code>New Resource</code> button. We will create a <code>Dogs</code> resource in our <code>Pet Demo</code> project.</p>
+<p><img alt="new resource" src="/images/new_resource.png" title="New API Resource" /></p>
+<p>Enter the following information into the <code>New Resource</code> fields:</p>
+<p><strong>Title</strong>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Dogs
+</pre></div>
+</td></tr></table></p>
+<p><strong>Path</strong>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>/dogs
+</pre></div>
+</td></tr></table></p>
+<p><strong>Properties</strong>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;age&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Age, in human years, of the dog.&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;integer&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;breed&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The breed of the dog.&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The name of the dog.&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></p>
+<p>Click <code>Save</code> to save the new <code>Dogs</code> API Resource. Once the Resource is created, you can immediately start <a href="/documentation/projects/resources/#querying-data">Creating and Querying data</a></p>
+<h3 id="view-details">View Details<a class="headerlink" href="#view-details" title="Permanent link">&para;</a></h3>
+<p>To view the details of an API Resource, click the ellipsis button and select <code>More</code>.</p>
+<p><img alt="details" src="/images/more.png" title="API Resource Details" /></p>
+<p>This will open a modal with the details of the selected API Resource:</p>
+<p><img alt="details" src="/images/view.png" title="API Resource Details" /></p>
+<p><strong>Settings</strong></p>
+<p>Displays helpful information regarding the API Resource including the name, ID, and URL to the Resource's data. There are also a few editable fields here for <code>Parallel Read</code> and <code>Parallel Write</code> which control user access to the data. To learn more about these options, skip ahead to <a href="/documentation/projects/resources/#configure-access">Configure Access</a></p>
+<p><strong>Properties</strong></p>
+<p>This section shows the configured properties that describe the data for this API Resource. These are not editable.</p>
+<p><strong>Data</strong></p>
+<p>Lists the data stored within this API Resource as a paginated list that can be traversed.</p>
+<h3 id="configure-access">Configure Access<a class="headerlink" href="#configure-access" title="Permanent link">&para;</a></h3>
+<p>By default, <a href="/documentation/projects/access/">Project Users &amp; API Keys</a> with a "User" role will only have access to their data (i.e. objects that have been created by a User/API Key can only be accessed by that User/API Key). This is based on the Machinable managed <code>_metadata</code> object that is stored and returned within each object.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Users/API Keys with the role of "Admin" will have access to all API Resource data, based on that "User/API Key" access policy.</p>
+</div>
+<p>This access can be changed on a per API Resource basis by enabling the Parallel access fields:</p>
+<p><strong>Parallel Read</strong></p>
+<p>When enabled, any User/API Key can read (Get, List) any object, regardless of who/what created it. Disabled by default.</p>
+<p><strong>Parallel Write</strong></p>
+<p>When enabled, any User/API Key can write (Update, Delete) any object, regardless of who/what created it. Disabled by default.</p>
 <h2 id="querying-data">Querying Data<a class="headerlink" href="#querying-data" title="Permanent link">&para;</a></h2>
-<h2 id="configure-access">Configure Access<a class="headerlink" href="#configure-access" title="Permanent link">&para;</a></h2>
+<p>Refer to the <a href="/documentation/querying_data/crud/">Querying</a> documentation to see detailed examples regarding how to query for API Resource and Collection data. The examples in the <a href="/documentation/querying_data/crud/">Querying</a> documentation use a Collection but can be interchanged with the API Resource defined above.</p>
+<h3 id="possible-errors">Possible Errors<a class="headerlink" href="#possible-errors" title="Permanent link">&para;</a></h3>
+<p>API Resources and Collections may return the following error status codes.</p>
+<table>
+<thead>
+<tr>
+<th>Status Code</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>400 Bad Request</code></td>
+<td>A field is missing or is of the wrong data type based on the JSON Schema for the Resource</td>
+</tr>
+<tr>
+<td><code>401 Unauthorized</code></td>
+<td>Missing or invalid authorization header</td>
+</tr>
+<tr>
+<td><code>403 Forbidden</code></td>
+<td>The requester is not allowed to access the resource</td>
+</tr>
+<tr>
+<td><code>404 Not Found</code></td>
+<td>The resource or object does not exist</td>
+</tr>
+<tr>
+<td><code>500 Internal Server Error</code></td>
+<td>An unknown error occurred, try again later</td>
+</tr>
+</tbody>
+</table>
                 
                   
                 

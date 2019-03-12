@@ -497,6 +497,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../errors/" title="Error Codes" class="md-nav__link">
+      Error Codes
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -576,16 +588,12 @@
  7
  8
  9
-10
-11
-12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
 
 <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://pet-demo.machinable.io/collections/dogs&quot;</span>
 
 <span class="n">payload</span> <span class="o">=</span> <span class="s2">&quot;{</span><span class="se">\&quot;</span><span class="s2">name</span><span class="se">\&quot;</span><span class="s2">:</span><span class="se">\&quot;</span><span class="s2">Murphy</span><span class="se">\&quot;</span><span class="s2">, </span><span class="se">\&quot;</span><span class="s2">age</span><span class="se">\&quot;</span><span class="s2">:2, </span><span class="se">\&quot;</span><span class="s2">breed</span><span class="se">\&quot;</span><span class="s2">: </span><span class="se">\&quot;</span><span class="s2">French Bulldog</span><span class="se">\&quot;</span><span class="s2">}&quot;</span>
-<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;authorization&#39;</span><span class="p">:</span> <span class="s2">&quot;Basic dGVzdFVzZXI6aHVudGVyMg==&quot;</span>
-    <span class="p">}</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{}</span>
 
 <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">&quot;POST&quot;</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">payload</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
 
