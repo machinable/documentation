@@ -434,12 +434,73 @@
     Users
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-user" title="Create User" class="md-nav__link">
+    Create User
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edit-user" title="Edit User" class="md-nav__link">
+    Edit User
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authentication" title="Authentication" class="md-nav__link">
+    Authentication
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refresh-tokens" title="Refresh Tokens" class="md-nav__link">
+    Refresh Tokens
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
   <a href="#api-keys" title="API Keys" class="md-nav__link">
     API Keys
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-api-key" title="Create API Key" class="md-nav__link">
+    Create API Key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edit-api-key" title="Edit API Key" class="md-nav__link">
+    Edit API Key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authentication_1" title="Authentication" class="md-nav__link">
+    Authentication
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -628,12 +689,73 @@
     Users
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-user" title="Create User" class="md-nav__link">
+    Create User
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edit-user" title="Edit User" class="md-nav__link">
+    Edit User
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authentication" title="Authentication" class="md-nav__link">
+    Authentication
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refresh-tokens" title="Refresh Tokens" class="md-nav__link">
+    Refresh Tokens
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
   <a href="#api-keys" title="API Keys" class="md-nav__link">
     API Keys
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-api-key" title="Create API Key" class="md-nav__link">
+    Create API Key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edit-api-key" title="Edit API Key" class="md-nav__link">
+    Edit API Key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authentication_1" title="Authentication" class="md-nav__link">
+    Authentication
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -657,8 +779,351 @@
                 
                 
                 <h1 id="access">Access<a class="headerlink" href="#access" title="Permanent link">&para;</a></h1>
+<p>Project Access provides tools to create and manage Project Users and API Keys. These two entities are how someone or something interacts with the Project data stored in API Resources and Collections.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If your project authentication is disabled, anyone can access API Resource and Collection data for the project. Project Users and API Keys are note necesseary in this case.</p>
+</div>
 <h2 id="users">Users<a class="headerlink" href="#users" title="Permanent link">&para;</a></h2>
+<p>Project Users are intended to be end users of your Machinable Project. They are able to acquire a session and interact with the Project Data based on access policies. </p>
+<h3 id="create-user">Create User<a class="headerlink" href="#create-user" title="Permanent link">&para;</a></h3>
+<p>To create a new Project User navigate to your Project's <code>Access &gt; Users</code> page.</p>
+<p><img alt="empty users" src="/images/empty_users.png" title="No Users" /></p>
+<p>Click the <code>Create A User</code> button to open the new user modal and enter the new user's information.</p>
+<p><img alt="new users" src="/images/create_user.png" title="New User" /></p>
+<p><strong>Username</strong></p>
+<p>This user's username, used to login and obtain a session.</p>
+<p><strong>Password</strong></p>
+<p>This user's password, used to login and obtain a session. This should be recorded and kept secret, you will not be able to retrieve the password.</p>
+<p><strong>Role &amp; Access</strong></p>
+<p>The User's Role controls what objects they are able to access. <code>Users</code> will only have access to objects that they have created, depending on the Resource/Collection access policy. <code>Administrators</code> will have access to all created objects.</p>
+<p>The User's Access will determine how they can interact with the data. <code>Read</code> will allow the User to Get and List objects. <code>Write</code> will allow the User to Create, Edit, and Delete objects.</p>
+<h3 id="edit-user">Edit User<a class="headerlink" href="#edit-user" title="Permanent link">&para;</a></h3>
+<p>To edit a User's Role &amp; Access, click the ellipsis button for that user and select <code>Edit Access</code>.</p>
+<p><img alt="edit users" src="/images/edit_user.png" title="Edit User" /></p>
+<h3 id="authentication">Authentication<a class="headerlink" href="#authentication" title="Permanent link">&para;</a></h3>
+<p>In order to make authenticated requests to API Resources and Collections, Project Users will need an access token.</p>
+<p>First, the user will need to obtain a session. To do that, make an <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication#Basic_authentication_scheme">HTTP Basic authentication</a> request to your project's <code>/sessions</code> endpoint. This will return an <code>access_token</code> and a <code>refresh_token</code> in the form of <a href="https://jwt.io/">JSON Web Tokens</a>:</p>
+<div class="superfences-tabs">
+<input name="__tabs_1" type="radio" id="__tab_1_0" checked="checked" />
+<label for="__tab_1_0">Bash</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># base64 encode username|password to make HTTP Basic authn request</span>
+$ <span class="nb">echo</span> <span class="s2">&quot;testUser:hunter2&quot;</span> <span class="p">|</span> base64
+<span class="nv">dGVzdFVzZXI6aHVudGVyMgo</span><span class="o">=</span>
+
+<span class="c1"># POST credentials to /sessions/ endpoint to recieve access token</span>
+$ curl -X POST <span class="se">\</span>
+  https://pet-demo.machinable.io/sessions/ <span class="se">\</span>
+  -H <span class="s1">&#39;authorization: Basic dGVzdFVzZXI6aHVudGVyMg==&#39;</span>
+</pre></div>
+</td></tr></table></div>
+<input name="__tabs_1" type="radio" id="__tab_1_1" />
+<label for="__tab_1_1">Python</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://pet-demo.machinable.io/sessions/&quot;</span>
+
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;authorization&#39;</span><span class="p">:</span> <span class="s2">&quot;Basic dGVzdFVzZXI6aHVudGVyMg==&quot;</span>
+    <span class="p">}</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">&quot;POST&quot;</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+<input name="__tabs_1" type="radio" id="__tab_1_2" />
+<label for="__tab_1_2">Javascript</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+
+<span class="kd">var</span> <span class="nx">xhr</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span>
+<span class="nx">xhr</span><span class="p">.</span><span class="nx">withCredentials</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+
+<span class="nx">xhr</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;readystatechange&quot;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">readyState</span> <span class="o">===</span> <span class="mi">4</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">responseText</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+
+<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s2">&quot;POST&quot;</span><span class="p">,</span> <span class="s2">&quot;https://pet-demo.machinable.io/sessions/&quot;</span><span class="p">);</span>
+<span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="s2">&quot;authorization&quot;</span><span class="p">,</span> <span class="s2">&quot;Basic dGVzdFVzZXI6aHVudGVyMg==&quot;</span><span class="p">);</span>
+
+<span class="nx">xhr</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+</pre></div>
+</td></tr></table></div>
+<input name="__tabs_1" type="radio" id="__tab_1_3" />
+<label for="__tab_1_3">Go</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="p">(</span>
+    <span class="s">&quot;fmt&quot;</span>
+    <span class="s">&quot;net/http&quot;</span>
+    <span class="s">&quot;io/ioutil&quot;</span>
+<span class="p">)</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="nx">url</span> <span class="o">:=</span> <span class="s">&quot;https://pet-demo.machinable.io/sessions/&quot;</span>
+
+    <span class="nx">req</span><span class="p">,</span> <span class="nx">_</span> <span class="o">:=</span> <span class="nx">http</span><span class="p">.</span><span class="nx">NewRequest</span><span class="p">(</span><span class="s">&quot;POST&quot;</span><span class="p">,</span> <span class="nx">url</span><span class="p">,</span> <span class="kc">nil</span><span class="p">)</span>
+
+    <span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nx">Add</span><span class="p">(</span><span class="s">&quot;authorization&quot;</span><span class="p">,</span> <span class="s">&quot;Basic dGVzdFVzZXI6aHVudGVyMg==&quot;</span><span class="p">)</span>
+
+    <span class="nx">res</span><span class="p">,</span> <span class="nx">_</span> <span class="o">:=</span> <span class="nx">http</span><span class="p">.</span><span class="nx">DefaultClient</span><span class="p">.</span><span class="nx">Do</span><span class="p">(</span><span class="nx">req</span><span class="p">)</span>
+
+    <span class="k">defer</span> <span class="nx">res</span><span class="p">.</span><span class="nx">Body</span><span class="p">.</span><span class="nx">Close</span><span class="p">()</span>
+    <span class="nx">body</span><span class="p">,</span> <span class="nx">_</span> <span class="o">:=</span> <span class="nx">ioutil</span><span class="p">.</span><span class="nx">ReadAll</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">Body</span><span class="p">)</span>
+
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nb">string</span><span class="p">(</span><span class="nx">body</span><span class="p">))</span>
+
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<p>Successful response:
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;access_token&quot;</span><span class="p">:</span> <span class="s2">&quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NTIzMjI4MTksInByb2plY3RzIjp7InBldC1kZW1vIjp0cnVlfSwidXNlciI6eyJhY3RpdmUiOnRydWUsImlkIjoiNWM4NjhkNDBhNzc0OGJiMjI0ODMzZjRiIiwibmFtZSI6InRlc3RVc2VyIiwicmVhZCI6dHJ1ZSwidHlwZSI6InByb2plY3QiLCJ3cml0ZSI6dHJ1ZX19.93H4H3FyPGrzOGb3WHRO7RLUGezpYxbVki7oGqdyA6E&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Successfully logged in&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;refresh_token&quot;</span><span class="p">:</span> <span class="s2">&quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NTI1ODExMTksInNlc3Npb25faWQiOiI1Yzg2OGQ3ZmE3NzQ4YmIyMjQ4MzNmNGMiLCJ1c2VyX2lkIjoiNWM4NjhkNDBhNzc0OGJiMjI0ODMzZjRiIn0.wWyb-nNff3RBw73D1hqN9k8U8_pKMHWGShMwA9YvSAc&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;session_id&quot;</span><span class="p">:</span> <span class="s2">&quot;5c868d7fa7748bb224833f4c&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></p>
+<p>Once the user has a session, authenticated requests can be made by adding the <code>Authorization</code> header with the <code>bearer</code> text and <code>access_token</code> to each request:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Authorization: bearer <span class="o">{</span>access_token<span class="o">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>Access tokens have a limited lifetime of 5 minutes. They then need to be exchanged for a new Access token using the refresh token returned in the <code>/sessions/</code> response.</p>
+<h3 id="refresh-tokens">Refresh Tokens<a class="headerlink" href="#refresh-tokens" title="Permanent link">&para;</a></h3>
+<p>After the access token has expired, client requests will return with a <code>401 Unauthorized</code> status code. When this happens, the client can attempt to "refresh" their existing session by exchanging the refresh token for a new access token. This is done by making a <code>POST</code> to the project's <code>/sessions/refresh</code> endpoint with the header <code>Authorization: Bearer {refresh_token}</code>. Refer to the example request below to see how the refresh token is used to get a new access token:</p>
+<div class="superfences-tabs">
+<input name="__tabs_2" type="radio" id="__tab_2_0" checked="checked" />
+<label for="__tab_2_0">Bash</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>curl -X POST <span class="se">\</span>
+  https://pet-demo.machinable.io/sessions/refresh/ <span class="se">\</span>
+  -H <span class="s1">&#39;authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NTI1ODExMTksInNlc3Npb25faWQiOiI1Yzg2OGQ3ZmE3NzQ4YmIyMjQ4MzNmNGMiLCJ1c2VyX2lkIjoiNWM4NjhkNDBhNzc0OGJiMjI0ODMzZjRiIn0.wWyb-nNff3RBw73D1hqN9k8U8_pKMHWGShMwA9YvSAc&#39;</span>
+</pre></div>
+</td></tr></table></div>
+<input name="__tabs_2" type="radio" id="__tab_2_1" />
+<label for="__tab_2_1">Python</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://pet-demo.machinable.io/sessions/refresh/&quot;</span>
+
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;authorization&#39;</span><span class="p">:</span> <span class="s2">&quot;Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NTI1ODExMTksInNlc3Npb25faWQiOiI1Yzg2OGQ3ZmE3NzQ4YmIyMjQ4MzNmNGMiLCJ1c2VyX2lkIjoiNWM4NjhkNDBhNzc0OGJiMjI0ODMzZjRiIn0.wWyb-nNff3RBw73D1hqN9k8U8_pKMHWGShMwA9YvSAc&quot;</span>
+    <span class="p">}</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">&quot;POST&quot;</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+<input name="__tabs_2" type="radio" id="__tab_2_2" />
+<label for="__tab_2_2">Javascript</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+
+<span class="kd">var</span> <span class="nx">xhr</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span>
+<span class="nx">xhr</span><span class="p">.</span><span class="nx">withCredentials</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+
+<span class="nx">xhr</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;readystatechange&quot;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">readyState</span> <span class="o">===</span> <span class="mi">4</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">responseText</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+
+<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s2">&quot;POST&quot;</span><span class="p">,</span> <span class="s2">&quot;https://pet-demo.machinable.io/sessions/refresh/&quot;</span><span class="p">);</span>
+<span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="s2">&quot;authorization&quot;</span><span class="p">,</span> <span class="s2">&quot;Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NTI1ODExMTksInNlc3Npb25faWQiOiI1Yzg2OGQ3ZmE3NzQ4YmIyMjQ4MzNmNGMiLCJ1c2VyX2lkIjoiNWM4NjhkNDBhNzc0OGJiMjI0ODMzZjRiIn0.wWyb-nNff3RBw73D1hqN9k8U8_pKMHWGShMwA9YvSAc&quot;</span><span class="p">);</span>
+
+<span class="nx">xhr</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+</pre></div>
+</td></tr></table></div>
+<input name="__tabs_2" type="radio" id="__tab_2_3" />
+<label for="__tab_2_3">Go</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="p">(</span>
+    <span class="s">&quot;fmt&quot;</span>
+    <span class="s">&quot;net/http&quot;</span>
+    <span class="s">&quot;io/ioutil&quot;</span>
+<span class="p">)</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="nx">url</span> <span class="o">:=</span> <span class="s">&quot;https://pet-demo.machinable.io/sessions/refresh/&quot;</span>
+
+    <span class="nx">req</span><span class="p">,</span> <span class="nx">_</span> <span class="o">:=</span> <span class="nx">http</span><span class="p">.</span><span class="nx">NewRequest</span><span class="p">(</span><span class="s">&quot;POST&quot;</span><span class="p">,</span> <span class="nx">url</span><span class="p">,</span> <span class="kc">nil</span><span class="p">)</span>
+
+    <span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nx">Add</span><span class="p">(</span><span class="s">&quot;authorization&quot;</span><span class="p">,</span> <span class="s">&quot;Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NTI1ODExMTksInNlc3Npb25faWQiOiI1Yzg2OGQ3ZmE3NzQ4YmIyMjQ4MzNmNGMiLCJ1c2VyX2lkIjoiNWM4NjhkNDBhNzc0OGJiMjI0ODMzZjRiIn0.wWyb-nNff3RBw73D1hqN9k8U8_pKMHWGShMwA9YvSAc&quot;</span><span class="p">)</span>
+
+    <span class="nx">res</span><span class="p">,</span> <span class="nx">_</span> <span class="o">:=</span> <span class="nx">http</span><span class="p">.</span><span class="nx">DefaultClient</span><span class="p">.</span><span class="nx">Do</span><span class="p">(</span><span class="nx">req</span><span class="p">)</span>
+
+    <span class="k">defer</span> <span class="nx">res</span><span class="p">.</span><span class="nx">Body</span><span class="p">.</span><span class="nx">Close</span><span class="p">()</span>
+    <span class="nx">body</span><span class="p">,</span> <span class="nx">_</span> <span class="o">:=</span> <span class="nx">ioutil</span><span class="p">.</span><span class="nx">ReadAll</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">Body</span><span class="p">)</span>
+
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nb">string</span><span class="p">(</span><span class="nx">body</span><span class="p">))</span>
+
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<p>Successful response:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="err">&lt;</span> <span class="err">HTTP/</span><span class="mf">1.1</span> <span class="mi">200</span> <span class="err">OK</span>
+
+<span class="p">{</span>
+    <span class="nt">&quot;access_token&quot;</span><span class="p">:</span> <span class="s2">&quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NTIzMjI4MTksInByb2plY3RzIjp7InBldC1kZW1vIjp0cnVlfSwidXNlciI6eyJhY3RpdmUiOnRydWUsImlkIjoiNWM4NjhkNDBhNzc0OGJiMjI0ODMzZjRiIiwibmFtZSI6InRlc3RVc2VyIiwicmVhZCI6dHJ1ZSwidHlwZSI6InByb2plY3QiLCJ3cml0ZSI6dHJ1ZX19.93H4H3FyPGrzOGb3WHRO7RLUGezpYxbVki7oGqdyA6E&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>The client can then use this new access token to make requests.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Refresh tokens also expire after a certain amount of time.</p>
+</div>
+<p>If the refresh request returns <code>401 Unauthorized</code> then the refresh token is expired as well and the user will need to obtain a new session by logging in again.</p>
 <h2 id="api-keys">API Keys<a class="headerlink" href="#api-keys" title="Permanent link">&para;</a></h2>
+<p>Project API Keys are intended to be used by other software/machines. They can be useful if you want to proxy user requests, automatically manage data, or run tests against Machinable.</p>
+<h3 id="create-api-key">Create API Key<a class="headerlink" href="#create-api-key" title="Permanent link">&para;</a></h3>
+<p>To create a new Project API Key navigate to your Project's <code>Access &gt; API Keys</code> page.</p>
+<p><img alt="empty api keys" src="/images/empty_keys.png" title="No API Keys" /></p>
+<p>Click the <code>Generate API Token</code> button to open the new API Key modal and enter the API Key's information.</p>
+<p><img alt="new api keys" src="/images/new_apikey.png" title="New API Key" /></p>
+<p><strong>Generated Key</strong></p>
+<p>This is the automatically generated API Key. Be sure to copy the API Key and save it somewhere safe as you will not be able to view it again.</p>
+<p><strong>Description</strong></p>
+<p>The description is meant to help you identify the API Key being used by your client and Machinable logs.</p>
+<p><strong>Role &amp; Access</strong></p>
+<p>This is identical to the Project User Role &amp; Access.</p>
+<p>The API Key's Role controls what objects it is able to access. <code>Users</code> will only have access to objects that they have created, depending on the Resource/Collection access policy. <code>Administrators</code> will have access to all created objects.</p>
+<p>The API Key's Access will determine how it can interact with the data. <code>Read</code> will allow the API Key to Get and List objects. <code>Write</code> will allow the API Key to Create, Edit, and Delete objects.</p>
+<h3 id="edit-api-key">Edit API Key<a class="headerlink" href="#edit-api-key" title="Permanent link">&para;</a></h3>
+<p>To edit an API Key's Role &amp; Access, click the ellipsis button for that API Key and select <code>Edit Access</code>.</p>
+<p><img alt="edit api keys" src="/images/edit_apikey.png" title="Edit API Key" /></p>
+<h3 id="authentication_1">Authentication<a class="headerlink" href="#authentication_1" title="Permanent link">&para;</a></h3>
+<p>To make authenticated requests with a Project API Key, add the <code>Authorization</code> header with the <code>apikey</code> text to each request:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Authorization: apikey <span class="o">{</span>api_key_string<span class="o">}</span>
+</pre></div>
+</td></tr></table>
+
+<p><br/></p>
                 
                   
                 
