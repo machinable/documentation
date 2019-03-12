@@ -227,7 +227,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../resources/" title="Projects" class="md-tabs__link md-tabs__link--active">
+        <a href="../introduction/" title="Projects" class="md-tabs__link md-tabs__link--active">
           Projects
         </a>
       
@@ -372,6 +372,18 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../introduction/" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
         
           
           
@@ -657,8 +669,21 @@
                 
                 
                 <h1 id="security">Security<a class="headerlink" href="#security" title="Permanent link">&para;</a></h1>
+<p>The security page provides request logs, made by project users as well as project administrators, and active project user sessions, which can be revoked if needed.</p>
 <h2 id="logs">Logs<a class="headerlink" href="#logs" title="Permanent link">&para;</a></h2>
+<p>To view request logs for your project, navigate to the project's <code>Security &gt; Logs</code> page. This page shows all request logs for the last 24 hours. Logs include request path, response status code, initiator, and timestamp. The initiator is the name of the requester, whether it be a project user, api key description, or project administrator.</p>
+<p><img alt="logs" src="../../images/logs.png" title="Request Logs" /></p>
+<p>Logs can be filtered by clicking the <code>Filter</code> button at the top right of the screen. Logs are filterable by Requester Type and Status Code.</p>
+<p><img alt="filtered logs" src="../../images/logs_filtered.png" title="Request Logs - Filtered" /></p>
 <h2 id="sessions">Sessions<a class="headerlink" href="#sessions" title="Permanent link">&para;</a></h2>
+<p>To view active Project User sessions, navigate to the project's <code>Security &gt; Sessions</code> page. This page shows all active Project User sessions with helpful information including client location, IP Address, and the last time the client refreshed their access token. </p>
+<p><img alt="sessions" src="../../images/sessions.png" title="Project User Sessions" /></p>
+<p>Sessions can be revoked at any time by a Project Administrator by clicking the <code>Revoke</code> button for the user. This will require the Project User to login again.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Revoking a session does not guarantee that a Project User will need to login again <em>immediately</em>. Their existing access token, if they have one, will allow them to make authenticated requests until that access token has expired.</p>
+</div>
+<p><br/></p>
                 
                   
                 
