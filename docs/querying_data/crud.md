@@ -121,7 +121,7 @@ Authorization: bearer {access_token}
 ```
 
 !!! info
-    Access tokens have a limited lifetime of 5 minutes. They then need to be exchanged for a new Access token using the refresh token. Refer to [Project Users](/documentation/projects/access/#users) for more information about refreshing an access token.
+    Access tokens have a limited lifetime of 5 minutes. They then need to be exchanged for a new Access token using the refresh token. Refer to [Project Users](/documentation/projects/access/#refresh-tokens) for more information about refreshing an access token.
 
 ## Create
 

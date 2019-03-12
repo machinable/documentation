@@ -6,11 +6,11 @@ Collections are endpoints which store any form of JSON data, with no validation.
 
 ### Create a new Collection
 
-Collections are created when data is created.
+To create a new Collection, navigate to your Project's Collections page. We will create a dogs collection in our Pet Demo project.
 
 ![new collection](/images/new_collection.png "New Collection")
 
-To create a new Collection, POST a JSON object to the collections endpoint you would like to create:
+Collections are created when data is first created, so POST a JSON object to the collections endpoint you would like to create:
 
 {!querying_data/queries/create.md!}
 
