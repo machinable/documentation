@@ -21,6 +21,7 @@ nav:
     - 'Pagination': 'querying_data/pagination.md'
     - 'Filtering': 'querying_data/filtering.md'
     - 'Sorting': 'querying_data/sorting.md'
+    - 'Error Codes': 'querying_data/errors.md'
   # - Account:
   #   - 'Contact': 'account/contact.md'
   #   - 'Password Reset': 'account/password.md'

@@ -11,9 +11,7 @@ import requests
 url = "https://pet-demo.machinable.io/collections/dogs"
 
 payload = "{\"name\":\"Murphy\", \"age\":2, \"breed\": \"French Bulldog\"}"
-headers = {
-    'authorization': "Basic dGVzdFVzZXI6aHVudGVyMg=="
-    }
+headers = {}
 
 response = requests.request("POST", url, data=payload, headers=headers)
 
