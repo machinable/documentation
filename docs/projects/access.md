@@ -37,7 +37,7 @@ The User's Access will determine how they can interact with the data. `Read` wil
 
 To edit a User's Role & Access, click the ellipsis button for that user and select `Edit Access`.
 
-![edit users](/images/edit_user.png "Edit User")
+![edit users](../images/edit_user.png "Edit User")
 
 ### Authentication
 
@@ -155,11 +155,11 @@ Project API Keys are intended to be used by other software/machines. They can be
 
 To create a new Project API Key navigate to your Project's `Access > API Keys` page.
 
-![empty api keys](/images/empty_keys.png "No API Keys")
+![empty api keys](../images/empty_keys.png "No API Keys")
 
 Click the `Generate API Token` button to open the new API Key modal and enter the API Key's information.
 
-![new api keys](/images/new_apikey.png "New API Key")
+![new api keys](../images/new_apikey.png "New API Key")
 
 **Generated Key**
 
@@ -181,7 +181,7 @@ The API Key's Access will determine how it can interact with the data. `Read` wi
 
 To edit an API Key's Role & Access, click the ellipsis button for that API Key and select `Edit Access`.
 
-![edit api keys](/images/edit_apikey.png "Edit API Key")
+![edit api keys](../images/edit_apikey.png "Edit API Key")
 
 ### Authentication
 

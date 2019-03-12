@@ -8,7 +8,7 @@ API Resources are endpoints which store JSON Objects that are described and vali
 
 To create a new API Resource, navigate to your Project's `API` page and click the `New Resource` button. We will create a `Dogs` resource in our `Pet Demo` project.
 
-![new resource](/images/new_resource.png "New API Resource")
+![new resource](../images/new_resource.png "New API Resource")
 
 Enter the following information into the `New Resource` fields:
 
@@ -46,13 +46,13 @@ Click `Save` to save the new `Dogs` API Resource. Once the Resource is created, 
 
 To view the details of an API Resource, click the ellipsis button and select `More`.
 
-![details](/images/more.png "API Resource Details")
+![details](../images/more.png "API Resource Details")
 
 
 This will open a modal with the details of the selected API Resource:
 
 
-![details](/images/view.png "API Resource Details")
+![details](../images/view.png "API Resource Details")
 
 **Settings**
 

@@ -8,7 +8,7 @@ Collections are endpoints which store any form of JSON data, with no validation.
 
 To create a new Collection, navigate to your Project's Collections page. We will create a dogs collection in our Pet Demo project.
 
-![new collection](/images/new_collection.png "New Collection")
+![new collection](../images/new_collection.png "New Collection")
 
 Collections are created when data is first created, so POST a JSON object to the collections endpoint you would like to create:
 
@@ -16,19 +16,19 @@ Collections are created when data is first created, so POST a JSON object to the
 
 The `dogs` collection should now be listed on the Collections page.
 
-![collections](/images/collections.png "Collections")
+![collections](../images/collections.png "Collections")
 
 ### View Details
 
 To view the details of an existing Collection, click the ellipsis button and select `More`.
 
-![details](/images/collection_details.png "Collection Details")
+![details](../images/collection_details.png "Collection Details")
 
 
 This will open a modal with the details of the selected Collection:
 
 
-![details](/images/collection_view.png "Collection Details")
+![details](../images/collection_view.png "Collection Details")
 
 **Settings**
 
