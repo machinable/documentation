@@ -11,6 +11,7 @@ nav:
   - Release Notes: 'release_notes.md'
   - About: 'about.md'
   - Projects:
+    - 'Introduction': 'projects/introduction.md'
     - 'API Resources': 'projects/resources.md'
     - 'Collections': 'projects/collections.md'
     - 'Access': 'projects/access.md'
