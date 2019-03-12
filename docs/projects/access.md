@@ -13,11 +13,11 @@ Project Users are intended to be end users of your Machinable Project. They are 
 
 To create a new Project User navigate to your Project's `Access > Users` page.
 
-![empty users](/images/empty_users.png "No Users")
+![empty users](../images/empty_users.png "No Users")
 
 Click the `Create A User` button to open the new user modal and enter the new user's information.
 
-![new users](/images/create_user.png "New User")
+![new users](../images/create_user.png "New User")
 
 **Username**
 
