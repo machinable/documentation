@@ -1,5 +1,9 @@
 ## API Changelog
 
+### 0.10.1
+
+* Project user refresh tokens
+
 ### 0.10.0
 
 * Fix pagination URL scheme
