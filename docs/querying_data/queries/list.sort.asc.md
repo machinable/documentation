@@ -88,7 +88,7 @@ Successful response:
         }
     ],
     "links": {
-        "self": "http://pet-demo.machinable.io/collections/dogs?_limit=10&_offset=0&_sort=age"
+        "self": "https://pet-demo.machinable.io/collections/dogs?_limit=10&_offset=0&_sort=age"
     }
 }
 ```

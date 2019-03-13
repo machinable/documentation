@@ -77,8 +77,8 @@ Successful response:
     }
   ],
   "links": {
-    "self": "http://pet-demo.machinable.io/collections/dogs?_limit=1&_offset=1",
-    "prev": "http://pet-demo.machinable.io/collections/dogs?_limit=1&_offset=0"
+    "self": "https://pet-demo.machinable.io/collections/dogs?_limit=1&_offset=1",
+    "prev": "https://pet-demo.machinable.io/collections/dogs?_limit=1&_offset=0"
   }
 }
 ```
