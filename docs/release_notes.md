@@ -1,5 +1,10 @@
 ## API Changelog
 
+### 0.10.0
+
+* Fix pagination URL scheme
+* Editable access of users and api keys
+
 ### 0.9.0
 
 * Fix collection PUT bug
@@ -13,6 +18,11 @@
 * Misc. additions to slug blacklist
 
 ## UI Changelog
+
+### 0.8.0
+
+* Editable access of users and api keys
+* User and API Key IDs copy button functional
 
 ### 0.7.0
 
