@@ -62,3 +62,27 @@ Refer to the [Querying](/documentation/querying_data/crud/) documentation to see
 ### Possible Errors
 
 {!querying_data/errors.md!}
+
+## Usage
+
+Usage metrics are gathered for any requests made to Collections. You can view your project's usage metrics by navigating to `Collections > Usage`.
+
+![usage](../images/usage.png "Collection Usage")
+
+Usage reports the following metrics:
+
+**Requests**
+
+This is the count of HTTP Requests made to all of the collections endpoints in the last 1 hour.
+
+**Storage**
+
+Storage is distributed across 2 visualizations. The first is the **total space in MB** used by collection data. The second is a table showing the amount of space, in MB, each collection is using.
+
+**Status Codes**
+
+This visualizes the count of status codes of each request to Collections, summarized every 5 minutes, for the past 1 hour.
+
+**Average Response Times**
+
+This visualizes the response times of each request to Collections, averaged every 5 minutes, for the past 1 hour.

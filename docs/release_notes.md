@@ -1,5 +1,9 @@
 ## API Changelog
 
+### 0.11.0
+
+* Resource and Collection usage metrics
+
 ### 0.10.1
 
 * Project user refresh tokens
@@ -22,6 +26,10 @@
 * Misc. additions to slug blacklist
 
 ## UI Changelog
+
+### 0.9.0
+
+* Resource and Collection usage metrics
 
 ### 0.8.0
 
