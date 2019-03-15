@@ -95,7 +95,7 @@ Refer to the [Querying](/documentation/querying_data/crud/) documentation to see
 
 Usage metrics are gathered for any requests made to API Resources. You can view your project's usage metrics by navigating to `API > Usage`.
 
-![usage](../images/usage.png "Collection Usage")
+![usage](../images/api_usage.png "Collection Usage")
 
 Usage reports the following metrics:
 
