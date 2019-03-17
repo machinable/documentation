@@ -27,6 +27,14 @@
 
 ## UI Changelog
 
+### 0.9.2 - March 16th, 2019
+
+* Use [Monaco Editor](https://github.com/Microsoft/monaco-editor) / [react-monaco-editor](https://github.com/superRaytin/react-monaco-editor) to edit API Resource properties
+
+### 0.9.1 - March 15th, 2019
+
+* Fix status code chart, use automatic tick steps
+
 ### 0.9.0
 
 * Resource and Collection usage metrics
