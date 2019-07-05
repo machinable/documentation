@@ -2,7 +2,7 @@
 
 Machinable gives developers the ability to store and manage their application's data in a structured, validated, RESTful way without having to write any backend code.
 
-### ![machinable screenshot](images/browser.png)
+### ![machinable screenshot](img/browser.png)
 
 ## Features
 
@@ -10,13 +10,9 @@ Machinable gives developers the ability to store and manage their application's 
 
 [API Resources](/projects/resources/) are defined endpoints that store structured data which is validated on creation based on the [JSON Schema]() that describes your application's data.
 
-### Collections
-
-[Collections](/projects/collections/) are lists of unstructured data. Store any JSON object in your collections without having to rely on data validation.
-
 ### User/API Key Access
 
-Create API Keys to manage your project data and allow users to register to your project. Users then have access to API Resource and Collection data based on authorization policies that you configure.
+Create API Keys to manage your project data and allow users to register to your project. Users then have access to API Resources based on authorization policies that you configure.
 
 ## Goal
 

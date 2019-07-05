@@ -30,17 +30,16 @@ This is the subdomain that will be given to your project in the form of `https:/
 
 A longer description of your project. What are you using this project for? Are there any relevant links that this project should reference? Etc.
 
-**Authentication Required**
+**User Registration**
 
-This specifies if User/API Key authentication will be required to access the API Resource and Collection data stored for this project. If this is disabled, anyone with your project links can access the data. _This can be changed at any time_.
+This specifies if anyone with the registration URL can register a new user with your project. If this is disabled users can only be added through your project's the Machinable dashboard. _This can be changed at any time_.
 
 Once you have filled out the form, click 'Create'. Your project is now ready to use!
 
 ## What's Next?
 
 1. [Create an API Resource](/documentation/projects/resources/)
-2. [Manage Collections](/documentation/projects/collections/)
-3. [Create and query some data](/documentation/querying_data/crud/)
-4. [Create an application that uses your Machinable project](/documentation/reference/sample_projects/)
+2. [Create and query some data](/documentation/querying_data/crud/)
+3. [Create an application that uses your Machinable project](/documentation/reference/sample_projects/)
 
 <br/>

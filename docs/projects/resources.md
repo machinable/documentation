@@ -8,7 +8,7 @@ API Resources are endpoints which store JSON Objects that are described and vali
 
 To create a new API Resource, navigate to your Project's `API` page and click the `New Resource` button. We will create a `Dogs` resource in our `Pet Demo` project.
 
-![new resource](../images/new_resource.png "New API Resource")
+![new resource](../img/new_resource.png "New API Resource")
 
 Enter the following information into the `New Resource` fields:
 
@@ -22,23 +22,47 @@ Dogs
 /dogs
 ```
 
-**Properties**
+**Schema**
 ```json
 {
+  "type": "object",
+  "properties": {
     "age": {
-        "description": "Age, in human years, of the dog.",
-        "type": "integer"
+      "description": "The age of the dogs.",
+      "maximum": 50,
+      "minimum": 0,
+      "type": "integer"
     },
     "breed": {
-        "description": "The breed of the dog.",
-        "type": "string"
+      "enum": [
+        "lab",
+        "bulldog",
+        "retriever",
+        "hound",
+        "mut",
+        "other"
+      ],
+      "type": "string"
     },
     "name": {
-        "description": "The name of the dog.",
-        "type": "string"
+      "description": "The name of the dog.",
+      "maxLength": 32,
+      "minLength": 0,
+      "type": "string"
     }
+  },
+  "required": [
+    "name",
+    "breed",
+    "age"
+  ]
 }
 ```
+
+The resource schema can be configured with the JSON Schema Builder form or with the JSON editor. 
+
+!!! note
+    Machinable supports a subset of JSON schema dictated by the form.
 
 Click `Save` to save the new `Dogs` API Resource. Once the Resource is created, you can immediately start [Creating and Querying data](/documentation/projects/resources/#querying-data)
 
@@ -46,21 +70,25 @@ Click `Save` to save the new `Dogs` API Resource. Once the Resource is created, 
 
 To view the details of an API Resource, click the ellipsis button and select `More`.
 
-![details](../images/more.png "API Resource Details")
+![details](../img/more_resource.png "API Resource Details")
 
 
 This will open a modal with the details of the selected API Resource:
 
 
-![details](../images/view.png "API Resource Details")
+![details](../img/resource_details.png "API Resource Details")
 
-**Settings**
+**Details**
 
-Displays helpful information regarding the API Resource including the name, ID, and URL to the Resource's data. There are also a few editable fields here for `Parallel Read` and `Parallel Write` which control user access to the data. To learn more about these options, skip ahead to [Configure Access](/documentation/projects/resources/#configure-access)
+Displays helpful information regarding the API Resource including the name, ID, and URL to the Resource's data. 
 
-**Properties**
+**Access**
 
-This section shows the configured properties that describe the data for this API Resource. These are not editable.
+This tab provides access configuration for the specific resource. To learn more about these options, skip ahead to [Configure Access](/documentation/projects/resources/#configure-access)
+
+**Schema**
+
+This section shows the configured JSON Schema that describes the data for this API Resource. These are not editable.
 
 **Data**
 
@@ -73,7 +101,23 @@ By default, [Project Users & API Keys](/documentation/projects/access/) with a "
 !!! note
     Users/API Keys with the role of "Admin" will have access to all API Resource data, based on that "User/API Key" access policy.
 
-This access can be changed on a per API Resource basis by enabling the Parallel access fields:
+This access can be changed on a per API Resource basis by enabling the access fields:
+
+**Create**
+
+Authentication is required to create new objects.
+
+**Read**
+
+Anyone with the project URL can read objects.
+
+**Update**
+
+Authentication is required to update objects.
+
+**Delete**
+
+Authentication is required to delete objects.
 
 **Parallel Read**
 
@@ -95,7 +139,7 @@ Refer to the [Querying](/documentation/querying_data/crud/) documentation to see
 
 Usage metrics are gathered for any requests made to API Resources. You can view your project's usage metrics by navigating to `API > Usage`.
 
-![usage](../images/api_usage.png "Collection Usage")
+![usage](../img/usage.png "Collection Usage")
 
 Usage reports the following metrics:
 

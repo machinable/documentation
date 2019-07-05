@@ -1,12 +1,12 @@
 Project settings can be accessed by navigating to the `Settings` tab of the project. This page provides the Project Administrators with the Project Name and Hostnames, both of which can be copied to clipboard by clicking the `Copy` button.
 
-![project settings](../images/project_settings.png "Project Settings")
+![project settings](../img/settings.png "Project Settings")
 
 The project settings page also exposes the option to enable and disable project Authentication, as well as an option to delete the project
 
-## Authentication Required
+## User Registration
 
-This flag is a project level setting that determines whether clients must first authenticate before managing API Resource or Collection data. If it is **disabled**, anyone with the project links can Create, Read, Update, and Delete project data. If it is **enabled** both API Resources and Collections will require the client to authenticate their requests.
+This flag is a project level setting that determines whether users can openly register to your project. If it is **disabled**, users can only be created from within your project's Machinable dashboard. If it is **enabled**, anyone with the link can register a new user and begin interacting with your project's API.
 
 ## Delete Project
 
