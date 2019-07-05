@@ -2,7 +2,7 @@
 
 Navigate to [https://machinable.io](https://machinable.io) and register for an account. This will require a valid email address.
 
-### ![machinable register](images/register.png)
+### ![machinable register](img/register.png)
 
 Confirm your email by following the link in your inbox. You will then be able to login to Machinable and start managing your projects!
 
@@ -10,7 +10,7 @@ Confirm your email by following the link in your inbox. You will then be able to
 
 After logging in for the first time you will see a fairly empty screen which invites you to create a new project. Click the 'Create A Project' button to get started.
 
-### ![machinable register](images/new_project.png)
+### ![machinable register](img/new_project.png)
 
 Provide the necessary information for your project:
 
