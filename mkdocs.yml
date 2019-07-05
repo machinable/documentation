@@ -13,7 +13,7 @@ nav:
   - Projects:
     - 'Introduction': 'projects/introduction.md'
     - 'API Resources': 'projects/resources.md'
-    - 'Collections': 'projects/collections.md'
+    # - 'Collections': 'projects/collections.md'
     - 'Access': 'projects/access.md'
     - 'Security': 'projects/security.md'
     - 'Settings': 'projects/settings.md'
