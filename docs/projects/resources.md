@@ -8,7 +8,7 @@ API Resources are endpoints which store JSON Objects that are described and vali
 
 To create a new API Resource, navigate to your Project's `API` page and click the `New Resource` button. We will create a `Dogs` resource in our `Pet Demo` project.
 
-![new resource](../img/new_resource.png "New API Resource")
+![new resource](../img/final/new_resource.png "New API Resource")
 
 Enter the following information into the `New Resource` fields:
 
@@ -59,7 +59,7 @@ Dogs
 }
 ```
 
-The resource schema can be configured with the JSON Schema Builder form or with the JSON editor. 
+The resource schema can be configured with the JSON Schema Builder form. 
 
 !!! note
     Machinable supports a subset of JSON schema dictated by the form.
@@ -70,13 +70,13 @@ Click `Save` to save the new `Dogs` API Resource. Once the Resource is created, 
 
 To view the details of an API Resource, click the ellipsis button and select `More`.
 
-![details](../img/more_resource.png "API Resource Details")
+![details](../img/final/resource_list.png "API Resource Details")
 
 
 This will open a modal with the details of the selected API Resource:
 
 
-![details](../img/resource_details.png "API Resource Details")
+![details](../img/final/resource_details.png "API Resource Details")
 
 **Details**
 
@@ -139,7 +139,7 @@ Refer to the [Querying](/documentation/querying_data/crud/) documentation to see
 
 Usage metrics are gathered for any requests made to API Resources. You can view your project's usage metrics by navigating to `API > Usage`.
 
-![usage](../img/usage.png "Collection Usage")
+![usage](../img/final/resource_usage.png "Collection Usage")
 
 Usage reports the following metrics:
 

@@ -2,9 +2,9 @@
 
 Machinable gives developers the ability to store and manage their application's data in a structured, validated, RESTful way without having to write any backend code.
 
-### ![machinable screenshot](img/browser.png)
+### ![machinable screenshot](img/final/landing.png)
 
-## Features
+## Included Features
 
 ### API Resources
 
@@ -14,11 +14,15 @@ Machinable gives developers the ability to store and manage their application's 
 
 Create API Keys to manage your project data and allow users to register to your project. Users then have access to API Resources based on authorization policies that you configure.
 
+### Web Hooks
+
+POST events to your custom application endpoints when resources are created, edited, or deleted. Implement business logic and build on top of Machinable.
+
 ## Goal
 
 The goal of Machinable is to provide developers an abstraction to their project's CRUD HTTP APIs. This let's you focus on the important parts of your project; User experience and business logic.
 
-With Machinable's combination of [CRUD interfaces](/querying_data/crud.md), Webhooks (TODO), and Websockets (TODO), developers can quickly develop prototypes or even full scale production applications. 
+With Machinable's combination of [CRUD interfaces](/querying_data/crud.md) and [Web Hooks](/projects/hooks.md), developers can quickly develop prototypes or even full scale production applications. 
 
 See our list of [open source sample applications](/reference/sample_projects.md) built on Machinable.
 

@@ -1,13 +1,13 @@
 
 ```bash tab="Bash"
 curl -X GET \
-  "https://pet-demo.machinable.io/collections/dogs?_limit=1&_offset=1"
+  "https://pet-demo.machinable.io/api/dogs?_limit=1&_offset=1"
 ```
 
 ```python tab="Python"
 import requests
 
-url = "https://pet-demo.machinable.io/collections/dogs?_limit=1&_offset=1"
+url = "https://pet-demo.machinable.io/api/dogs?_limit=1&_offset=1"
 
 headers = {}
 
@@ -27,7 +27,7 @@ xhr.addEventListener("readystatechange", function () {
   }
 });
 
-xhr.open("GET", "https://pet-demo.machinable.io/collections/dogs?_limit=1&_offset=1");
+xhr.open("GET", "https://pet-demo.machinable.io/api/dogs?_limit=1&_offset=1");
 
 xhr.send(data);
 ```
@@ -43,7 +43,7 @@ import (
 
 func main() {
 
-	url := "https://pet-demo.machinable.io/collections/dogs?_limit=1&_offset=1"
+	url := "https://pet-demo.machinable.io/api/dogs?_limit=1&_offset=1"
 
 	req, _ := http.NewRequest("GET", url, nil)
 
@@ -77,8 +77,8 @@ Successful response:
     }
   ],
   "links": {
-    "self": "https://pet-demo.machinable.io/collections/dogs?_limit=1&_offset=1",
-    "prev": "https://pet-demo.machinable.io/collections/dogs?_limit=1&_offset=0"
+    "self": "https://pet-demo.machinable.io/api/dogs?_limit=1&_offset=1",
+    "prev": "https://pet-demo.machinable.io/api/dogs?_limit=1&_offset=0"
   }
 }
 ```

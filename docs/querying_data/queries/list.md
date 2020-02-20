@@ -1,13 +1,13 @@
 
 ```bash tab="Bash"
 curl -X GET \
-  https://pet-demo.machinable.io/collections/dogs
+  https://pet-demo.machinable.io/api/dogs
 ```
 
 ```python tab="Python"
 import requests
 
-url = "https://pet-demo.machinable.io/collections/dogs"
+url = "https://pet-demo.machinable.io/api/dogs"
 
 headers = {}
 
@@ -27,7 +27,7 @@ xhr.addEventListener("readystatechange", function () {
   }
 });
 
-xhr.open("GET", "https://pet-demo.machinable.io/collections/dogs");
+xhr.open("GET", "https://pet-demo.machinable.io/api/dogs");
 
 xhr.send(data);
 ```
@@ -43,7 +43,7 @@ import (
 
 func main() {
 
-	url := "https://pet-demo.machinable.io/collections/dogs"
+	url := "https://pet-demo.machinable.io/api/dogs"
 
 	req, _ := http.NewRequest("GET", url, nil)
 
@@ -88,7 +88,7 @@ Successful response:
     }
   ],
   "links": {
-    "self": "https://pet-demo.machinable.io/collections/dogs?_limit=10&_offset=0"
+    "self": "https://pet-demo.machinable.io/api/dogs?_limit=10&_offset=0"
   }
 }
 ```

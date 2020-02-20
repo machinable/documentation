@@ -1,13 +1,13 @@
 
 ```bash tab="Bash"
 curl -X GET \
-  "https://pet-demo.machinable.io/collections/dogs?breed=German%20Shephard"
+  "https://pet-demo.machinable.io/api/dogs?breed=German%20Shephard"
 ```
 
 ```python tab="Python"
 import requests
 
-url = "https://pet-demo.machinable.io/collections/dogs?breed=German%20Shephard"
+url = "https://pet-demo.machinable.io/api/dogs?breed=German%20Shephard"
 
 headers = {}
 
@@ -27,7 +27,7 @@ xhr.addEventListener("readystatechange", function () {
   }
 });
 
-xhr.open("GET", "https://pet-demo.machinable.io/collections/dogs?breed=German%20Shephard");
+xhr.open("GET", "https://pet-demo.machinable.io/api/dogs?breed=German%20Shephard");
 
 xhr.send(data);
 ```
@@ -43,7 +43,7 @@ import (
 
 func main() {
 
-	url := "https://pet-demo.machinable.io/collections/dogs?breed=German%20Shephard"
+	url := "https://pet-demo.machinable.io/api/dogs?breed=German%20Shephard"
 
 	req, _ := http.NewRequest("GET", url, nil)
 
@@ -77,7 +77,7 @@ Successful response:
         }
     ],
     "links": {
-        "self": "https://pet-demo.machinable.io/collections/dogs?_limit=10&_offset=0&breed=German Shephard"
+        "self": "https://pet-demo.machinable.io/api/dogs?_limit=10&_offset=0&breed=German Shephard"
     }
 }
 ```

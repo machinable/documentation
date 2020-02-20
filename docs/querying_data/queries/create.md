@@ -1,14 +1,14 @@
 
 ```bash tab="Bash"
 $ curl -X POST \
-  https://pet-demo.machinable.io/collections/dogs \
+  https://pet-demo.machinable.io/api/dogs \
   -d '{"name":"Murphy", "age":2, "breed": "French Bulldog"}'
 ```
 
 ```python tab="Python"
 import requests
 
-url = "https://pet-demo.machinable.io/collections/dogs"
+url = "https://pet-demo.machinable.io/api/dogs"
 
 payload = "{\"name\":\"Murphy\", \"age\":2, \"breed\": \"French Bulldog\"}"
 headers = {}
@@ -29,7 +29,7 @@ xhr.addEventListener("readystatechange", function () {
   }
 });
 
-xhr.open("POST", "https://pet-demo.machinable.io/collections/dogs");
+xhr.open("POST", "https://pet-demo.machinable.io/api/dogs");
 
 xhr.send(data);
 ```
@@ -46,7 +46,7 @@ import (
 
 func main() {
 
-	url := "https://pet-demo.machinable.io/collections/dogs"
+	url := "https://pet-demo.machinable.io/api/dogs"
 
 	payload := strings.NewReader("{\"name\":\"Murphy\", \"age\":2, \"breed\": \"French Bulldog\"}")
 
