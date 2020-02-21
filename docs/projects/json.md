@@ -97,3 +97,103 @@ This visualizes the count of status codes of each request to Key/Value JSON, sum
 **Average Response Times**
 
 This visualizes the response times of each request to Key/Value JSON, averaged every 5 minutes, for the past 1 hour.
+
+### Sample Queries
+
+!!! note
+    The sample queries use [jq](https://stedolan.github.io/jq/) to process and format response JSON.
+
+#### Create data for root key
+
+```sh
+$ curl -s -X PUT -d '{ "7f98c91d5-e7be-4828-aa42-6866d134af6c": { "age": 32, "friends": [ "Mary", "John", "Ron" ], "job": { "title": "Clerk" }, "name": "Bob" }, "a973933c-a72c-41db-96c9-1369d196052b": { "age": 57, "friends": [ "Lisa" ], "job": { "title": "Engineer" }, "name": "Sam" } }' https://misc.machinable.io/json/people/ | jq "."
+{
+  "7f98c91d5-e7be-4828-aa42-6866d134af6c": {
+    "age": 32,
+    "friends": [
+      "Mary",
+      "John",
+      "Ron"
+    ],
+    "job": {
+      "title": "Clerk"
+    },
+    "name": "Bob"
+  },
+  "a973933c-a72c-41db-96c9-1369d196052b": {
+    "age": 57,
+    "friends": [
+      "Lisa"
+    ],
+    "job": {
+      "title": "Engineer"
+    },
+    "name": "Sam"
+  }
+}
+```
+
+#### Retrieve individual keys
+
+```sh
+$ curl -s https://misc.machinable.io/json/people/7f98c91d5-e7be-4828-aa42-6866d134af6c | jq "."
+{
+  "age": 32,
+  "friends": [
+    "Mary",
+    "John",
+    "Ron"
+  ],
+  "job": {
+    "title": "Clerk"
+  },
+  "name": "Bob"
+}
+```
+
+#### Retrieve by index of array
+
+```sh
+$ curl -s https://misc.machinable.io/json/people/7f98c91d5-e7be-4828-aa42-6866d134af6c/friends/1 | jq "."
+"John"
+```
+
+#### Create new key
+
+```sh
+$ curl -s -X POST -d '4' https://misc.machinable.io/json/people/7f98c91d5-e7be-4828-aa42-6866d134af6c/job/years | jq "."
+4
+
+$ curl -s https://misc.machinable.io/json/people/7f98c91d5-e7be-4828-aa42-6866d134af6c/job | jq "."
+{
+  "title": "Clerk",
+  "years": 4
+}
+```
+
+#### Update key
+
+```sh
+$ curl -s -X PUT -d '{"title": "Manager", "years": "1"}' https://misc.machinable.io/json/people/7f98c91d5-e7be-4828-aa42-6866d134af6c/job | jq "."
+{
+  "title": "Manager",
+  "years": "1"
+}
+```
+
+#### Delete key
+
+```sh
+$  curl -s -X DELETE https://misc.machinable.io/json/people/7f98c91d5-e7be-4828-aa42-6866d134af6c/job | jq "."{}
+
+$  curl -s https://misc.machinable.io/json/people/7f98c91d5-e7be-4828-aa42-6866d134af6c | jq "."
+{
+  "age": 32,
+  "friends": [
+    "Mary",
+    "John",
+    "Ron"
+  ],
+  "name": "Bob"
+}
+```
