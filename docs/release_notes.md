@@ -1,5 +1,12 @@
 ## API Changelog
 
+### 0.36.2
+
+* Web Hooks
+* OpenAPI Spec
+
+... skipped some, sorry.
+
 ### 0.11.0
 
 * Resource and Collection usage metrics
@@ -26,6 +33,13 @@
 * Misc. additions to slug blacklist
 
 ## UI Changelog
+
+### 0.21.0
+
+* Web Hooks
+* Documentation
+
+... skipped some, sorry.
 
 ### 0.9.2 - March 16th, 2019
 
