@@ -382,6 +382,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../projects/json/" title="Key/Value" class="md-nav__link">
+      Key/Value
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../projects/access/" title="Access" class="md-nav__link">
       Access
     </a>
@@ -394,8 +406,32 @@
 
 
   <li class="md-nav__item">
+    <a href="../../projects/hooks/" title="Web Hooks" class="md-nav__link">
+      Web Hooks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../projects/security/" title="Security" class="md-nav__link">
       Security
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../projects/documentation/" title="Documentation" class="md-nav__link">
+      Documentation
     </a>
   </li>
 
@@ -575,10 +611,9 @@
                 
                   <h1>Filtering</h1>
                 
-                <p>Data stored in API Resource and Collection endpoints can be filtered, or searched, by adding a query parameter to the request URL with the field set to the value you want to search on.</p>
+                <p>Data stored in API Resource endpoints can be filtered, or searched, by adding a query parameter to the request URL with the field set to the value you want to search on.</p>
 <div class="admonition note">
 <p class="admonition-title">Limitations of Filtering</p>
-<p>Data stored in Collections can only be filtered on <strong>string data types</strong>. If your application requires filtering on different data types, consider using API Resources as an alternative to Collections. Since API Resource data is defined with JSON Schema the type is known and, therefore, filterable.</p>
 <p>Filters can only currently support <strong>exact matches</strong>.</p>
 </div>
 <p>For example, if we want to search the <code>dogs</code> collection in the <code>Pet Demo</code> project for dogs that are of the breed "German Shephard", we would add the following to the request URL:</p>
@@ -590,7 +625,7 @@
 <span class="nv">breed</span><span class="o">=</span>German Shephard
 
 <span class="c1"># full URL</span>
-https://pet-demo.machinable.io/collections/dogs?breed<span class="o">=</span>German%20Shephard
+https://pet-demo.machinable.io/api/dogs?breed<span class="o">=</span>German%20Shephard
 </pre></div>
 </td></tr></table>
 
@@ -600,7 +635,7 @@ https://pet-demo.machinable.io/collections/dogs?breed<span class="o">=</span>Ger
 <label for="__tab_1_0">Bash</label>
 <div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>curl -X GET <span class="se">\</span>
-  <span class="s2">&quot;https://pet-demo.machinable.io/collections/dogs?breed=German%20Shephard&quot;</span>
+  <span class="s2">&quot;https://pet-demo.machinable.io/api/dogs?breed=German%20Shephard&quot;</span>
 </pre></div>
 </td></tr></table></div>
 <input name="__tabs_1" type="radio" id="__tab_1_1" />
@@ -615,7 +650,7 @@ https://pet-demo.machinable.io/collections/dogs?breed<span class="o">=</span>Ger
 8
 9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://pet-demo.machinable.io/collections/dogs?breed=German%20Shephard&quot;</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://pet-demo.machinable.io/api/dogs?breed=German%20Shephard&quot;</span>
 
 <span class="n">headers</span> <span class="o">=</span> <span class="p">{}</span>
 
@@ -648,7 +683,7 @@ https://pet-demo.machinable.io/collections/dogs?breed<span class="o">=</span>Ger
   <span class="p">}</span>
 <span class="p">});</span>
 
-<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="s2">&quot;https://pet-demo.machinable.io/collections/dogs?breed=German%20Shephard&quot;</span><span class="p">);</span>
+<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="s2">&quot;https://pet-demo.machinable.io/api/dogs?breed=German%20Shephard&quot;</span><span class="p">);</span>
 
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
 </pre></div>
@@ -686,7 +721,7 @@ https://pet-demo.machinable.io/collections/dogs?breed<span class="o">=</span>Ger
 
 <span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
 
-    <span class="nx">url</span> <span class="o">:=</span> <span class="s">&quot;https://pet-demo.machinable.io/collections/dogs?breed=German%20Shephard&quot;</span>
+    <span class="nx">url</span> <span class="o">:=</span> <span class="s">&quot;https://pet-demo.machinable.io/api/dogs?breed=German%20Shephard&quot;</span>
 
     <span class="nx">req</span><span class="p">,</span> <span class="nx">_</span> <span class="o">:=</span> <span class="nx">http</span><span class="p">.</span><span class="nx">NewRequest</span><span class="p">(</span><span class="s">&quot;GET&quot;</span><span class="p">,</span> <span class="nx">url</span><span class="p">,</span> <span class="kc">nil</span><span class="p">)</span>
 
@@ -740,7 +775,7 @@ https://pet-demo.machinable.io/collections/dogs?breed<span class="o">=</span>Ger
         <span class="p">}</span>
     <span class="p">],</span>
     <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="s2">&quot;https://pet-demo.machinable.io/collections/dogs?_limit=10&amp;_offset=0&amp;breed=German Shephard&quot;</span>
+        <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="s2">&quot;https://pet-demo.machinable.io/api/dogs?_limit=10&amp;_offset=0&amp;breed=German Shephard&quot;</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>

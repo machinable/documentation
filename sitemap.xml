@@ -2,82 +2,97 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>https://machinable.io/</loc>
-     <lastmod>2019-07-05</lastmod>
+     <lastmod>2020-02-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://machinable.io/getting_started/</loc>
-     <lastmod>2019-07-05</lastmod>
+     <lastmod>2020-02-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://machinable.io/release_notes/</loc>
-     <lastmod>2019-07-05</lastmod>
+     <lastmod>2020-02-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://machinable.io/about/</loc>
-     <lastmod>2019-07-05</lastmod>
+     <lastmod>2020-02-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://machinable.io/projects/introduction/</loc>
-     <lastmod>2019-07-05</lastmod>
+     <lastmod>2020-02-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://machinable.io/projects/resources/</loc>
-     <lastmod>2019-07-05</lastmod>
+     <lastmod>2020-02-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://machinable.io/projects/json/</loc>
+     <lastmod>2020-02-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://machinable.io/projects/access/</loc>
-     <lastmod>2019-07-05</lastmod>
+     <lastmod>2020-02-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://machinable.io/projects/hooks/</loc>
+     <lastmod>2020-02-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://machinable.io/projects/security/</loc>
-     <lastmod>2019-07-05</lastmod>
+     <lastmod>2020-02-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://machinable.io/projects/documentation/</loc>
+     <lastmod>2020-02-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://machinable.io/projects/settings/</loc>
-     <lastmod>2019-07-05</lastmod>
+     <lastmod>2020-02-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://machinable.io/querying_data/crud/</loc>
-     <lastmod>2019-07-05</lastmod>
+     <lastmod>2020-02-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://machinable.io/querying_data/pagination/</loc>
-     <lastmod>2019-07-05</lastmod>
+     <lastmod>2020-02-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://machinable.io/querying_data/filtering/</loc>
-     <lastmod>2019-07-05</lastmod>
+     <lastmod>2020-02-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://machinable.io/querying_data/sorting/</loc>
-     <lastmod>2019-07-05</lastmod>
+     <lastmod>2020-02-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://machinable.io/querying_data/errors/</loc>
-     <lastmod>2019-07-05</lastmod>
+     <lastmod>2020-02-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://machinable.io/reference/json_schema/</loc>
-     <lastmod>2019-07-05</lastmod>
+     <lastmod>2020-02-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://machinable.io/reference/sample_projects/</loc>
-     <lastmod>2019-07-05</lastmod>
+     <lastmod>2020-02-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>

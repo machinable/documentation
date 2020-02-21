@@ -386,6 +386,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../projects/json/" title="Key/Value" class="md-nav__link">
+      Key/Value
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../projects/access/" title="Access" class="md-nav__link">
       Access
     </a>
@@ -398,8 +410,32 @@
 
 
   <li class="md-nav__item">
+    <a href="../../projects/hooks/" title="Web Hooks" class="md-nav__link">
+      Web Hooks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../projects/security/" title="Security" class="md-nav__link">
       Security
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../projects/documentation/" title="Documentation" class="md-nav__link">
+      Documentation
     </a>
   </li>
 
@@ -663,14 +699,14 @@
                 
                   <h1>Pagination</h1>
                 
-                <p>When making calls to Machinable API Resources or Collections, there may be a ton of results to return, depending on your use case. In order to keep response sizes small and more manageable, results are returned as a paginated list.</p>
-<p>Take a look at the response of the following list operation to the <code>dogs</code> Collection in our <code>Pet Demo</code> project:</p>
+                <p>When making calls to Machinable API Resources, there may be a ton of results to return, depending on your use case. In order to keep response sizes small and more manageable, results are returned as a paginated list.</p>
+<p>Take a look at the response of the following list operation to the <code>dogs</code> API Resource in our <code>Pet Demo</code> project:</p>
 <div class="superfences-tabs">
 <input name="__tabs_1" type="radio" id="__tab_1_0" checked="checked" />
 <label for="__tab_1_0">Bash</label>
 <div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>curl -X GET <span class="se">\</span>
-  https://pet-demo.machinable.io/collections/dogs
+  https://pet-demo.machinable.io/api/dogs
 </pre></div>
 </td></tr></table></div>
 <input name="__tabs_1" type="radio" id="__tab_1_1" />
@@ -685,7 +721,7 @@
 8
 9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://pet-demo.machinable.io/collections/dogs&quot;</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://pet-demo.machinable.io/api/dogs&quot;</span>
 
 <span class="n">headers</span> <span class="o">=</span> <span class="p">{}</span>
 
@@ -718,7 +754,7 @@
   <span class="p">}</span>
 <span class="p">});</span>
 
-<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="s2">&quot;https://pet-demo.machinable.io/collections/dogs&quot;</span><span class="p">);</span>
+<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="s2">&quot;https://pet-demo.machinable.io/api/dogs&quot;</span><span class="p">);</span>
 
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
 </pre></div>
@@ -756,7 +792,7 @@
 
 <span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
 
-    <span class="nx">url</span> <span class="o">:=</span> <span class="s">&quot;https://pet-demo.machinable.io/collections/dogs&quot;</span>
+    <span class="nx">url</span> <span class="o">:=</span> <span class="s">&quot;https://pet-demo.machinable.io/api/dogs&quot;</span>
 
     <span class="nx">req</span><span class="p">,</span> <span class="nx">_</span> <span class="o">:=</span> <span class="nx">http</span><span class="p">.</span><span class="nx">NewRequest</span><span class="p">(</span><span class="s">&quot;GET&quot;</span><span class="p">,</span> <span class="nx">url</span><span class="p">,</span> <span class="kc">nil</span><span class="p">)</span>
 
@@ -832,13 +868,13 @@
     <span class="p">}</span>
   <span class="p">],</span>
   <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="s2">&quot;https://pet-demo.machinable.io/collections/dogs?_limit=10&amp;_offset=0&quot;</span>
+    <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="s2">&quot;https://pet-demo.machinable.io/api/dogs?_limit=10&amp;_offset=0&quot;</span>
   <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 </td></tr></table></p>
 <p>As you can see, there are <strong>3</strong> keys at the root of the JSON response; <code>count</code>, <code>links</code>, and <code>items</code>.</p>
-<p><strong>count</strong> is the total count of results for the query. Based on our request, we now know there are a total of 2 dogs in the <code>dogs</code> collection because we are not filtering the data in any way.</p>
+<p><strong>count</strong> is the total count of results for the query. Based on our request, we now know there are a total of 2 dogs in the <code>dogs</code> resource because we are not filtering the data in any way.</p>
 <p><strong>links</strong> provides context to what URLs we can request to traverse forward or backward through the paginated results.</p>
 <p><strong>items</strong> contains each object returned <em>for the page we are requesting</em>. The page we are requesting is determined by the query parameters <code>_limit</code> and <code>_offset</code>.</p>
 <h3 id="limit">Limit<a class="headerlink" href="#limit" title="Permanent link">&para;</a></h3>
@@ -849,7 +885,7 @@
 <label for="__tab_2_0">Bash</label>
 <div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>curl -X GET <span class="se">\</span>
-  <span class="s2">&quot;https://pet-demo.machinable.io/collections/dogs?_limit=1&quot;</span>
+  <span class="s2">&quot;https://pet-demo.machinable.io/api/dogs?_limit=1&quot;</span>
 </pre></div>
 </td></tr></table></div>
 <input name="__tabs_2" type="radio" id="__tab_2_1" />
@@ -864,7 +900,7 @@
 8
 9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://pet-demo.machinable.io/collections/dogs?_limit=1&quot;</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://pet-demo.machinable.io/api/dogs?_limit=1&quot;</span>
 
 <span class="n">headers</span> <span class="o">=</span> <span class="p">{}</span>
 
@@ -897,7 +933,7 @@
   <span class="p">}</span>
 <span class="p">});</span>
 
-<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="s2">&quot;https://pet-demo.machinable.io/collections/dogs?_limit=1&quot;</span><span class="p">);</span>
+<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="s2">&quot;https://pet-demo.machinable.io/api/dogs?_limit=1&quot;</span><span class="p">);</span>
 
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
 </pre></div>
@@ -935,7 +971,7 @@
 
 <span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
 
-    <span class="nx">url</span> <span class="o">:=</span> <span class="s">&quot;https://pet-demo.machinable.io/collections/dogs?_limit=1&quot;</span>
+    <span class="nx">url</span> <span class="o">:=</span> <span class="s">&quot;https://pet-demo.machinable.io/api/dogs?_limit=1&quot;</span>
 
     <span class="nx">req</span><span class="p">,</span> <span class="nx">_</span> <span class="o">:=</span> <span class="nx">http</span><span class="p">.</span><span class="nx">NewRequest</span><span class="p">(</span><span class="s">&quot;GET&quot;</span><span class="p">,</span> <span class="nx">url</span><span class="p">,</span> <span class="kc">nil</span><span class="p">)</span>
 
@@ -990,15 +1026,15 @@
     <span class="p">}</span>
   <span class="p">],</span>
   <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="s2">&quot;https://pet-demo.machinable.io/collections/dogs?_limit=1&amp;_offset=0&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;next&quot;</span><span class="p">:</span> <span class="s2">&quot;https://pet-demo.machinable.io/collections/dogs?_limit=1&amp;_offset=1&quot;</span>
+    <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="s2">&quot;https://pet-demo.machinable.io/api/dogs?_limit=1&amp;_offset=0&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;next&quot;</span><span class="p">:</span> <span class="s2">&quot;https://pet-demo.machinable.io/api/dogs?_limit=1&amp;_offset=1&quot;</span>
   <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 </td></tr></table></p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>The <code>_limit</code> query parameter is a reserved field that cannot be used in API Resource or Collection data fields.</p>
+<p>The <code>_limit</code> query parameter is a reserved field that cannot be used in API Resource data fields.</p>
 <p>The <code>_limit</code> query parameter has the following constraints:</p>
 <p>Maximum: 100 <br/>
 Minimum: 1 <br/>
@@ -1006,13 +1042,13 @@ Default: 10 <br/></p>
 </div>
 <h3 id="offset">Offset<a class="headerlink" href="#offset" title="Permanent link">&para;</a></h3>
 <p><code>_offset</code> is a query parameter that can be used to specify how many results to skip before the response payload is built and returned. If we take a look at our sample request above, we'll see that we are not specifying an offset, so Machinable will default the offset to 0, giving us the first page of the results.</p>
-<p>If we continue to build off of the request in our example and provide an <code>_offset</code> of <code>1</code> with a <code>_limit</code> of <code>1</code>, we will get the second "page" of results. Since there are only <code>2</code> dogs in the collection, the second page will be the last page:</p>
+<p>If we continue to build off of the request in our example and provide an <code>_offset</code> of <code>1</code> with a <code>_limit</code> of <code>1</code>, we will get the second "page" of results. Since there are only <code>2</code> dogs in the resource, the second page will be the last page:</p>
 <div class="superfences-tabs">
 <input name="__tabs_3" type="radio" id="__tab_3_0" checked="checked" />
 <label for="__tab_3_0">Bash</label>
 <div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>curl -X GET <span class="se">\</span>
-  <span class="s2">&quot;https://pet-demo.machinable.io/collections/dogs?_limit=1&amp;_offset=1&quot;</span>
+  <span class="s2">&quot;https://pet-demo.machinable.io/api/dogs?_limit=1&amp;_offset=1&quot;</span>
 </pre></div>
 </td></tr></table></div>
 <input name="__tabs_3" type="radio" id="__tab_3_1" />
@@ -1027,7 +1063,7 @@ Default: 10 <br/></p>
 8
 9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://pet-demo.machinable.io/collections/dogs?_limit=1&amp;_offset=1&quot;</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://pet-demo.machinable.io/api/dogs?_limit=1&amp;_offset=1&quot;</span>
 
 <span class="n">headers</span> <span class="o">=</span> <span class="p">{}</span>
 
@@ -1060,7 +1096,7 @@ Default: 10 <br/></p>
   <span class="p">}</span>
 <span class="p">});</span>
 
-<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="s2">&quot;https://pet-demo.machinable.io/collections/dogs?_limit=1&amp;_offset=1&quot;</span><span class="p">);</span>
+<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="s2">&quot;https://pet-demo.machinable.io/api/dogs?_limit=1&amp;_offset=1&quot;</span><span class="p">);</span>
 
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
 </pre></div>
@@ -1098,7 +1134,7 @@ Default: 10 <br/></p>
 
 <span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
 
-    <span class="nx">url</span> <span class="o">:=</span> <span class="s">&quot;https://pet-demo.machinable.io/collections/dogs?_limit=1&amp;_offset=1&quot;</span>
+    <span class="nx">url</span> <span class="o">:=</span> <span class="s">&quot;https://pet-demo.machinable.io/api/dogs?_limit=1&amp;_offset=1&quot;</span>
 
     <span class="nx">req</span><span class="p">,</span> <span class="nx">_</span> <span class="o">:=</span> <span class="nx">http</span><span class="p">.</span><span class="nx">NewRequest</span><span class="p">(</span><span class="s">&quot;GET&quot;</span><span class="p">,</span> <span class="nx">url</span><span class="p">,</span> <span class="kc">nil</span><span class="p">)</span>
 
@@ -1153,15 +1189,15 @@ Default: 10 <br/></p>
     <span class="p">}</span>
   <span class="p">],</span>
   <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="s2">&quot;https://pet-demo.machinable.io/collections/dogs?_limit=1&amp;_offset=1&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;prev&quot;</span><span class="p">:</span> <span class="s2">&quot;https://pet-demo.machinable.io/collections/dogs?_limit=1&amp;_offset=0&quot;</span>
+    <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="s2">&quot;https://pet-demo.machinable.io/api/dogs?_limit=1&amp;_offset=1&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;prev&quot;</span><span class="p">:</span> <span class="s2">&quot;https://pet-demo.machinable.io/api/dogs?_limit=1&amp;_offset=0&quot;</span>
   <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 </td></tr></table></p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>The <code>_offset</code> query parameter is a reserved field that cannot be used in API Resource or Collection data fields.</p>
+<p>The <code>_offset</code> query parameter is a reserved field that cannot be used in API Resource data fields.</p>
 <p>The <code>_offset</code> query parameter has the following constraints:</p>
 <p>Minimum: 0 <br/>
 Default: 0 <br/></p>

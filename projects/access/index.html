@@ -386,6 +386,18 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../json/" title="Key/Value" class="md-nav__link">
+      Key/Value
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -506,8 +518,32 @@
 
 
   <li class="md-nav__item">
+    <a href="../hooks/" title="Web Hooks" class="md-nav__link">
+      Web Hooks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../security/" title="Security" class="md-nav__link">
       Security
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../documentation/" title="Documentation" class="md-nav__link">
+      Documentation
     </a>
   </li>
 
@@ -785,9 +821,9 @@
 <p>Project Users are intended to be end users of your Machinable Project. They are able to acquire a session and interact with the Project Data based on access policies. </p>
 <h3 id="create-user">Create User<a class="headerlink" href="#create-user" title="Permanent link">&para;</a></h3>
 <p>To create a new Project User navigate to your Project's <code>Access &gt; Users</code> page.</p>
-<p><img alt="empty users" src="../../img/access.png" title="No Users" /></p>
+<p><img alt="empty users" src="../../img/final/user_list.png" title="No Users" /></p>
 <p>Click the <code>Create A User</code> button to open the new user modal and enter the new user's information.</p>
-<p><img alt="new users" src="../../img/new_user.png" title="New User" /></p>
+<p><img alt="new users" src="../../img/final/new_user.png" title="New User" /></p>
 <p><strong>Username</strong></p>
 <p>This user's username, used to login and obtain a session.</p>
 <p><strong>Password</strong></p>
@@ -797,8 +833,8 @@
 <p>The User's Access will determine how they can interact with the data. <code>Read</code> will allow the User to Get and List objects. <code>Write</code> will allow the User to Create, Edit, and Delete objects.</p>
 <h3 id="edit-user">Edit User<a class="headerlink" href="#edit-user" title="Permanent link">&para;</a></h3>
 <p>To edit a User's Role &amp; Access, click the ellipsis button for that user and select <code>Edit Access</code>.</p>
-<p><img alt="edit users" src="../../img/edit_user_access.png" title="Edit User" /></p>
-<p><img alt="edit users" src="../../img/update_user.png" title="Edit User" /></p>
+<p><img alt="edit users" src="../../img/final/edit_list_user.png" title="Edit User" /></p>
+<p><img alt="edit users" src="../../img/final/edit_user.png" title="Edit User" /></p>
 <h3 id="authentication">Authentication<a class="headerlink" href="#authentication" title="Permanent link">&para;</a></h3>
 <p>In order to make authenticated requests to API Resources and Collections, Project Users will need an access token.</p>
 <p>First, the user will need to obtain a session. To do that, make an <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication#Basic_authentication_scheme">HTTP Basic authentication</a> request to your project's <code>/sessions</code> endpoint. This will return an <code>access_token</code> and a <code>refresh_token</code> in the form of <a href="https://jwt.io/">JSON Web Tokens</a>:</p>
@@ -1101,9 +1137,9 @@ $ curl -X POST <span class="se">\</span>
 <p>Project API Keys are intended to be used by other software/machines. They can be useful if you want to proxy user requests, automatically manage data, or run tests against Machinable.</p>
 <h3 id="create-api-key">Create API Key<a class="headerlink" href="#create-api-key" title="Permanent link">&para;</a></h3>
 <p>To create a new Project API Key navigate to your Project's <code>Access &gt; API Keys</code> page.</p>
-<p><img alt="empty api keys" src="../../img/api_keys.png" title="No API Keys" /></p>
+<p><img alt="empty api keys" src="../../img/final/api_keys.png" title="No API Keys" /></p>
 <p>Click the <code>Generate API Token</code> button to open the new API Key modal and enter the API Key's information.</p>
-<p><img alt="new api keys" src="../../img/new_apikey.png" title="New API Key" /></p>
+<p><img alt="new api keys" src="../../img/final/new_key.png" title="New API Key" /></p>
 <p><strong>Generated Key</strong></p>
 <p>This is the automatically generated API Key. Be sure to copy the API Key and save it somewhere safe as you will not be able to view it again.</p>
 <p><strong>Description</strong></p>
@@ -1114,8 +1150,8 @@ $ curl -X POST <span class="se">\</span>
 <p>The API Key's Access will determine how it can interact with the data. <code>Read</code> will allow the API Key to Get and List objects. <code>Write</code> will allow the API Key to Create, Edit, and Delete objects.</p>
 <h3 id="edit-api-key">Edit API Key<a class="headerlink" href="#edit-api-key" title="Permanent link">&para;</a></h3>
 <p>To edit an API Key's Role &amp; Access, click the ellipsis button for that API Key and select <code>Edit Access</code>.</p>
-<p><img alt="edit api keys" src="../../img/edit_apikey.png" title="Edit API Key" /></p>
-<p><img alt="edit api keys" src="../../img/edit_apikey_modal.png" title="Edit API Key" /></p>
+<p><img alt="edit api keys" src="../../img/final/edit_key_list.png" title="Edit API Key" /></p>
+<p><img alt="edit api keys" src="../../img/final/edit_key.png" title="Edit API Key" /></p>
 <h3 id="authentication_1">Authentication<a class="headerlink" href="#authentication_1" title="Permanent link">&para;</a></h3>
 <p>To make authenticated requests with a Project API Key, add the <code>Authorization</code> header with the <code>apikey</code> text to each request:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Authorization: apikey <span class="o">{</span>api_key_string<span class="o">}</span>
@@ -1143,7 +1179,7 @@ $ curl -X POST <span class="se">\</span>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../resources/" title="API Resources" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../json/" title="Key/Value" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1152,19 +1188,19 @@ $ curl -X POST <span class="se">\</span>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                API Resources
+                Key/Value
               </span>
             </div>
           </a>
         
         
-          <a href="../security/" title="Security" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../hooks/" title="Web Hooks" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Security
+                Web Hooks
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

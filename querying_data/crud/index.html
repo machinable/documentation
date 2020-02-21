@@ -386,6 +386,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../projects/json/" title="Key/Value" class="md-nav__link">
+      Key/Value
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../projects/access/" title="Access" class="md-nav__link">
       Access
     </a>
@@ -398,8 +410,32 @@
 
 
   <li class="md-nav__item">
+    <a href="../../projects/hooks/" title="Web Hooks" class="md-nav__link">
+      Web Hooks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../projects/security/" title="Security" class="md-nav__link">
       Security
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../projects/documentation/" title="Documentation" class="md-nav__link">
+      Documentation
     </a>
   </li>
 
@@ -771,8 +807,7 @@
                 
                   <h1>Manage Data</h1>
                 
-                <p>Machinable's main feature is the ability to perform CRUD (Create, Read, Update, Delete) operations on your project's API Resource and Collection endpoints.</p>
-<p>API Resources and Collections use the same syntax when performing CRUD operations. The only difference between the two is API Resources will return <code>400 Bad Request</code> when creating an object that does not match the defined JSON Schema. </p>
+                <p>Machinable's main feature is the ability to perform CRUD (Create, Read, Update, Delete) operations on your project's API Resource endpoints. API Resources provide data validation based on the JSON schema.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>See <a href="/documentation/projects/resources/">API Resources</a> for more information about data validation with JSON Schema.</p>
@@ -953,10 +988,10 @@ $ curl -X POST <span class="se">\</span>
 <p>Access tokens have a limited lifetime of 5 minutes. They then need to be exchanged for a new Access token using the refresh token. Refer to <a href="/documentation/projects/access/#refresh-tokens">Project Users</a> for more information about refreshing an access token.</p>
 </div>
 <h2 id="create">Create<a class="headerlink" href="#create" title="Permanent link">&para;</a></h2>
-<p>Create and store a new object in a specific Collection or API Resource.</p>
+<p>Create and store a new object in a specific API Resource.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>These examples are managing data within a <strong>Collection</strong> called <code>dogs</code> (<code>/collections/dogs</code>). These requests could also manage data within an <strong>API Resource</strong> called <code>dogs</code> at <code>/api/dogs</code>, given the correct JSON schema is defined.</p>
+<p>These examples are managing data within an <strong>API Resource</strong> called <code>dogs</code> at <code>/api/dogs</code>, given the correct JSON schema is defined.</p>
 </div>
 <div class="superfences-tabs">
 <input name="__tabs_2" type="radio" id="__tab_2_0" checked="checked" />
@@ -964,7 +999,7 @@ $ curl -X POST <span class="se">\</span>
 <div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ curl -X POST <span class="se">\</span>
-  https://pet-demo.machinable.io/collections/dogs <span class="se">\</span>
+  https://pet-demo.machinable.io/api/dogs <span class="se">\</span>
   -d <span class="s1">&#39;{&quot;name&quot;:&quot;Murphy&quot;, &quot;age&quot;:2, &quot;breed&quot;: &quot;French Bulldog&quot;}&#39;</span>
 </pre></div>
 </td></tr></table></div>
@@ -981,7 +1016,7 @@ $ curl -X POST <span class="se">\</span>
  9
 10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://pet-demo.machinable.io/collections/dogs&quot;</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://pet-demo.machinable.io/api/dogs&quot;</span>
 
 <span class="n">payload</span> <span class="o">=</span> <span class="s2">&quot;{</span><span class="se">\&quot;</span><span class="s2">name</span><span class="se">\&quot;</span><span class="s2">:</span><span class="se">\&quot;</span><span class="s2">Murphy</span><span class="se">\&quot;</span><span class="s2">, </span><span class="se">\&quot;</span><span class="s2">age</span><span class="se">\&quot;</span><span class="s2">:2, </span><span class="se">\&quot;</span><span class="s2">breed</span><span class="se">\&quot;</span><span class="s2">: </span><span class="se">\&quot;</span><span class="s2">French Bulldog</span><span class="se">\&quot;</span><span class="s2">}&quot;</span>
 <span class="n">headers</span> <span class="o">=</span> <span class="p">{}</span>
@@ -1015,7 +1050,7 @@ $ curl -X POST <span class="se">\</span>
   <span class="p">}</span>
 <span class="p">});</span>
 
-<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s2">&quot;POST&quot;</span><span class="p">,</span> <span class="s2">&quot;https://pet-demo.machinable.io/collections/dogs&quot;</span><span class="p">);</span>
+<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s2">&quot;POST&quot;</span><span class="p">,</span> <span class="s2">&quot;https://pet-demo.machinable.io/api/dogs&quot;</span><span class="p">);</span>
 
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
 </pre></div>
@@ -1058,7 +1093,7 @@ $ curl -X POST <span class="se">\</span>
 
 <span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
 
-    <span class="nx">url</span> <span class="o">:=</span> <span class="s">&quot;https://pet-demo.machinable.io/collections/dogs&quot;</span>
+    <span class="nx">url</span> <span class="o">:=</span> <span class="s">&quot;https://pet-demo.machinable.io/api/dogs&quot;</span>
 
     <span class="nx">payload</span> <span class="o">:=</span> <span class="nx">strings</span><span class="p">.</span><span class="nx">NewReader</span><span class="p">(</span><span class="s">&quot;{\&quot;name\&quot;:\&quot;Murphy\&quot;, \&quot;age\&quot;:2, \&quot;breed\&quot;: \&quot;French Bulldog\&quot;}&quot;</span><span class="p">)</span>
 
@@ -1105,15 +1140,15 @@ $ curl -X POST <span class="se">\</span>
 </pre></div>
 </td></tr></table></p>
 <h2 id="read">Read<a class="headerlink" href="#read" title="Permanent link">&para;</a></h2>
-<p>Retrieve a single object from a collection or list all objects that exist (paginated).</p>
+<p>Retrieve a single object from a resource or list all objects that exist (paginated).</p>
 <h3 id="retrieve-single-object">Retrieve single object<a class="headerlink" href="#retrieve-single-object" title="Permanent link">&para;</a></h3>
-<p>To retrieve a single object, make a <code>GET</code> request to the collection with the ID of the object as the last path parameter.</p>
+<p>To retrieve a single object, make a <code>GET</code> request to the resource with the ID of the object as the last path parameter.</p>
 <div class="superfences-tabs">
 <input name="__tabs_3" type="radio" id="__tab_3_0" checked="checked" />
 <label for="__tab_3_0">Bash</label>
 <div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>curl -X GET <span class="se">\</span>
-  https://pet-demo.machinable.io/collections/dogs/5c869da3a7748bb224833f5c
+  https://pet-demo.machinable.io/api/dogs/5c869da3a7748bb224833f5c
 </pre></div>
 </td></tr></table></div>
 <input name="__tabs_3" type="radio" id="__tab_3_1" />
@@ -1128,7 +1163,7 @@ $ curl -X POST <span class="se">\</span>
 8
 9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://pet-demo.machinable.io/collections/dogs/5c869da3a7748bb224833f5c&quot;</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://pet-demo.machinable.io/api/dogs/5c869da3a7748bb224833f5c&quot;</span>
 
 <span class="n">headers</span> <span class="o">=</span> <span class="p">{}</span>
 
@@ -1161,7 +1196,7 @@ $ curl -X POST <span class="se">\</span>
   <span class="p">}</span>
 <span class="p">});</span>
 
-<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="s2">&quot;https://pet-demo.machinable.io/collections/dogs/5c869da3a7748bb224833f5c&quot;</span><span class="p">);</span>
+<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="s2">&quot;https://pet-demo.machinable.io/api/dogs/5c869da3a7748bb224833f5c&quot;</span><span class="p">);</span>
 
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
 </pre></div>
@@ -1200,7 +1235,7 @@ $ curl -X POST <span class="se">\</span>
 
 <span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
 
-    <span class="nx">url</span> <span class="o">:=</span> <span class="s">&quot;https://pet-demo.machinable.io/collections/dogs/5c869da3a7748bb224833f5c&quot;</span>
+    <span class="nx">url</span> <span class="o">:=</span> <span class="s">&quot;https://pet-demo.machinable.io/api/dogs/5c869da3a7748bb224833f5c&quot;</span>
 
     <span class="nx">req</span><span class="p">,</span> <span class="nx">_</span> <span class="o">:=</span> <span class="nx">http</span><span class="p">.</span><span class="nx">NewRequest</span><span class="p">(</span><span class="s">&quot;GET&quot;</span><span class="p">,</span> <span class="nx">url</span><span class="p">,</span> <span class="kc">nil</span><span class="p">)</span>
 
@@ -1245,13 +1280,13 @@ $ curl -X POST <span class="se">\</span>
 </pre></div>
 </td></tr></table></p>
 <h3 id="list-objects">List objects<a class="headerlink" href="#list-objects" title="Permanent link">&para;</a></h3>
-<p>To retrieve a paginated list of objects for this collection, make a <code>GET</code> request to the collection.</p>
+<p>To retrieve a paginated list of objects for this resource, make a <code>GET</code> request to the resource.</p>
 <div class="superfences-tabs">
 <input name="__tabs_4" type="radio" id="__tab_4_0" checked="checked" />
 <label for="__tab_4_0">Bash</label>
 <div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>curl -X GET <span class="se">\</span>
-  https://pet-demo.machinable.io/collections/dogs
+  https://pet-demo.machinable.io/api/dogs
 </pre></div>
 </td></tr></table></div>
 <input name="__tabs_4" type="radio" id="__tab_4_1" />
@@ -1266,7 +1301,7 @@ $ curl -X POST <span class="se">\</span>
 8
 9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://pet-demo.machinable.io/collections/dogs&quot;</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://pet-demo.machinable.io/api/dogs&quot;</span>
 
 <span class="n">headers</span> <span class="o">=</span> <span class="p">{}</span>
 
@@ -1299,7 +1334,7 @@ $ curl -X POST <span class="se">\</span>
   <span class="p">}</span>
 <span class="p">});</span>
 
-<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="s2">&quot;https://pet-demo.machinable.io/collections/dogs&quot;</span><span class="p">);</span>
+<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="s2">&quot;https://pet-demo.machinable.io/api/dogs&quot;</span><span class="p">);</span>
 
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
 </pre></div>
@@ -1337,7 +1372,7 @@ $ curl -X POST <span class="se">\</span>
 
 <span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
 
-    <span class="nx">url</span> <span class="o">:=</span> <span class="s">&quot;https://pet-demo.machinable.io/collections/dogs&quot;</span>
+    <span class="nx">url</span> <span class="o">:=</span> <span class="s">&quot;https://pet-demo.machinable.io/api/dogs&quot;</span>
 
     <span class="nx">req</span><span class="p">,</span> <span class="nx">_</span> <span class="o">:=</span> <span class="nx">http</span><span class="p">.</span><span class="nx">NewRequest</span><span class="p">(</span><span class="s">&quot;GET&quot;</span><span class="p">,</span> <span class="nx">url</span><span class="p">,</span> <span class="kc">nil</span><span class="p">)</span>
 
@@ -1413,12 +1448,12 @@ $ curl -X POST <span class="se">\</span>
     <span class="p">}</span>
   <span class="p">],</span>
   <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="s2">&quot;https://pet-demo.machinable.io/collections/dogs?_limit=10&amp;_offset=0&quot;</span>
+    <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="s2">&quot;https://pet-demo.machinable.io/api/dogs?_limit=10&amp;_offset=0&quot;</span>
   <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 </td></tr></table></p>
-<p>Notice the collection objects are returned as a list in the <code>items</code> key. A maximum of 10 objects will be returned by default. </p>
+<p>Notice the resource objects are returned as a list in the <code>items</code> key. A maximum of 10 objects will be returned by default. </p>
 <p>See <a href="/documentation/querying_data/pagination">Pagination</a> for more information regarding the page limit as well as the other keys in the root of the response JSON.</p>
 <h2 id="update">Update<a class="headerlink" href="#update" title="Permanent link">&para;</a></h2>
 <p>Update a single object's values.</p>
@@ -1431,7 +1466,7 @@ $ curl -X POST <span class="se">\</span>
 4
 5
 6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>curl -X PUT <span class="se">\</span>
-  https://pet-demo.machinable.io/collections/dogs/5c869da3a7748bb224833f5c <span class="se">\</span>
+  https://pet-demo.machinable.io/api/dogs/5c869da3a7748bb224833f5c <span class="se">\</span>
   -d <span class="s1">&#39;{</span>
 <span class="s1">        &quot;age&quot;: 9,</span>
 <span class="s1">        &quot;name&quot;: &quot;Maximilian&quot;</span>
@@ -1451,7 +1486,7 @@ $ curl -X POST <span class="se">\</span>
  9
 10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://pet-demo.machinable.io/collections/dogs/5c869da3a7748bb224833f5c&quot;</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://pet-demo.machinable.io/api/dogs/5c869da3a7748bb224833f5c&quot;</span>
 
 <span class="n">payload</span> <span class="o">=</span> <span class="s2">&quot;{</span><span class="se">\n</span><span class="s2">    </span><span class="se">\&quot;</span><span class="s2">age</span><span class="se">\&quot;</span><span class="s2">: 9,</span><span class="se">\n</span><span class="s2">    </span><span class="se">\&quot;</span><span class="s2">name</span><span class="se">\&quot;</span><span class="s2">: </span><span class="se">\&quot;</span><span class="s2">Maximilian</span><span class="se">\&quot;\n</span><span class="s2">}&quot;</span>
 <span class="n">headers</span> <span class="o">=</span> <span class="p">{}</span>
@@ -1485,7 +1520,7 @@ $ curl -X POST <span class="se">\</span>
   <span class="p">}</span>
 <span class="p">});</span>
 
-<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s2">&quot;PUT&quot;</span><span class="p">,</span> <span class="s2">&quot;https://pet-demo.machinable.io/collections/dogs/5c869da3a7748bb224833f5c&quot;</span><span class="p">);</span>
+<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s2">&quot;PUT&quot;</span><span class="p">,</span> <span class="s2">&quot;https://pet-demo.machinable.io/api/dogs/5c869da3a7748bb224833f5c&quot;</span><span class="p">);</span>
 
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
 </pre></div>
@@ -1528,7 +1563,7 @@ $ curl -X POST <span class="se">\</span>
 
 <span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
 
-    <span class="nx">url</span> <span class="o">:=</span> <span class="s">&quot;https://pet-demo.machinable.io/collections/dogs/5c869da3a7748bb224833f5c&quot;</span>
+    <span class="nx">url</span> <span class="o">:=</span> <span class="s">&quot;https://pet-demo.machinable.io/api/dogs/5c869da3a7748bb224833f5c&quot;</span>
 
     <span class="nx">payload</span> <span class="o">:=</span> <span class="nx">strings</span><span class="p">.</span><span class="nx">NewReader</span><span class="p">(</span><span class="s">&quot;{\n    \&quot;age\&quot;: 9,\n    \&quot;name\&quot;: \&quot;Maximilian\&quot;\n}&quot;</span><span class="p">)</span>
 
@@ -1581,7 +1616,7 @@ $ curl -X POST <span class="se">\</span>
 <label for="__tab_6_0">Bash</label>
 <div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>curl -X DELETE <span class="se">\</span>
-  https://pet-demo.machinable.io/collections/dogs/5c869da3a7748bb224833f5c
+  https://pet-demo.machinable.io/api/dogs/5c869da3a7748bb224833f5c
 </pre></div>
 </td></tr></table></div>
 <input name="__tabs_6" type="radio" id="__tab_6_1" />
@@ -1596,7 +1631,7 @@ $ curl -X POST <span class="se">\</span>
 8
 9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://pet-demo.machinable.io/collections/dogs/5c869da3a7748bb224833f5c&quot;</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://pet-demo.machinable.io/api/dogs/5c869da3a7748bb224833f5c&quot;</span>
 
 <span class="n">headers</span> <span class="o">=</span> <span class="p">{}</span>
 
@@ -1629,7 +1664,7 @@ $ curl -X POST <span class="se">\</span>
   <span class="p">}</span>
 <span class="p">});</span>
 
-<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s2">&quot;DELETE&quot;</span><span class="p">,</span> <span class="s2">&quot;https://pet-demo.machinable.io/collections/dogs/5c869da3a7748bb224833f5c&quot;</span><span class="p">);</span>
+<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s2">&quot;DELETE&quot;</span><span class="p">,</span> <span class="s2">&quot;https://pet-demo.machinable.io/api/dogs/5c869da3a7748bb224833f5c&quot;</span><span class="p">);</span>
 
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
 </pre></div>
@@ -1668,7 +1703,7 @@ $ curl -X POST <span class="se">\</span>
 
 <span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
 
-    <span class="nx">url</span> <span class="o">:=</span> <span class="s">&quot;https://pet-demo.machinable.io/collections/dogs/5c869da3a7748bb224833f5c&quot;</span>
+    <span class="nx">url</span> <span class="o">:=</span> <span class="s">&quot;https://pet-demo.machinable.io/api/dogs/5c869da3a7748bb224833f5c&quot;</span>
 
     <span class="nx">req</span><span class="p">,</span> <span class="nx">_</span> <span class="o">:=</span> <span class="nx">http</span><span class="p">.</span><span class="nx">NewRequest</span><span class="p">(</span><span class="s">&quot;DELETE&quot;</span><span class="p">,</span> <span class="nx">url</span><span class="p">,</span> <span class="kc">nil</span><span class="p">)</span>
 

@@ -386,6 +386,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../projects/json/" title="Key/Value" class="md-nav__link">
+      Key/Value
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../projects/access/" title="Access" class="md-nav__link">
       Access
     </a>
@@ -398,8 +410,32 @@
 
 
   <li class="md-nav__item">
+    <a href="../../projects/hooks/" title="Web Hooks" class="md-nav__link">
+      Web Hooks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../projects/security/" title="Security" class="md-nav__link">
       Security
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../projects/documentation/" title="Documentation" class="md-nav__link">
+      Documentation
     </a>
   </li>
 
@@ -649,10 +685,10 @@
                 
                   <h1>Sorting</h1>
                 
-                <p>Query results from API Resources and Collections can be sorted based on a field in ascending or descending order. To sort query results, provide the <code>_sort</code> query parameter set to the field to sort on. Prefix the field with a dash (<code>-</code>) to sort in descending order.</p>
+                <p>Query results from API Resources can be sorted based on a field in ascending or descending order. To sort query results, provide the <code>_sort</code> query parameter set to the field to sort on. Prefix the field with a dash (<code>-</code>) to sort in descending order.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The <code>_sort</code> query parameter is a reserved field that cannot be used in API Resource or Collection data fields.</p>
+<p>The <code>_sort</code> query parameter is a reserved field that cannot be used in API Resource data fields.</p>
 </div>
 <h3 id="ascending">Ascending<a class="headerlink" href="#ascending" title="Permanent link">&para;</a></h3>
 <div class="superfences-tabs">
@@ -660,7 +696,7 @@
 <label for="__tab_1_0">Bash</label>
 <div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>curl -X GET <span class="se">\</span>
-  https://pet-demo.machinable.io/collections/dogs?_sort<span class="o">=</span>age
+  https://pet-demo.machinable.io/api/dogs?_sort<span class="o">=</span>age
 </pre></div>
 </td></tr></table></div>
 <input name="__tabs_1" type="radio" id="__tab_1_1" />
@@ -675,7 +711,7 @@
 8
 9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://pet-demo.machinable.io/collections/dogs?_sort=age&quot;</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://pet-demo.machinable.io/api/dogs?_sort=age&quot;</span>
 
 <span class="n">headers</span> <span class="o">=</span> <span class="p">{}</span>
 
@@ -708,7 +744,7 @@
   <span class="p">}</span>
 <span class="p">});</span>
 
-<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="s2">&quot;https://pet-demo.machinable.io/collections/dogs?_sort=age&quot;</span><span class="p">);</span>
+<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="s2">&quot;https://pet-demo.machinable.io/api/dogs?_sort=age&quot;</span><span class="p">);</span>
 
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
 </pre></div>
@@ -746,7 +782,7 @@
 
 <span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
 
-    <span class="nx">url</span> <span class="o">:=</span> <span class="s">&quot;https://pet-demo.machinable.io/collections/dogs?_sort=age&quot;</span>
+    <span class="nx">url</span> <span class="o">:=</span> <span class="s">&quot;https://pet-demo.machinable.io/api/dogs?_sort=age&quot;</span>
 
     <span class="nx">req</span><span class="p">,</span> <span class="nx">_</span> <span class="o">:=</span> <span class="nx">http</span><span class="p">.</span><span class="nx">NewRequest</span><span class="p">(</span><span class="s">&quot;GET&quot;</span><span class="p">,</span> <span class="nx">url</span><span class="p">,</span> <span class="kc">nil</span><span class="p">)</span>
 
@@ -822,7 +858,7 @@
         <span class="p">}</span>
     <span class="p">],</span>
     <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="s2">&quot;https://pet-demo.machinable.io/collections/dogs?_limit=10&amp;_offset=0&amp;_sort=age&quot;</span>
+        <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="s2">&quot;https://pet-demo.machinable.io/api/dogs?_limit=10&amp;_offset=0&amp;_sort=age&quot;</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
@@ -833,7 +869,7 @@
 <label for="__tab_2_0">Bash</label>
 <div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>curl -X GET <span class="se">\</span>
-  https://pet-demo.machinable.io/collections/dogs?_sort<span class="o">=</span>-age
+  https://pet-demo.machinable.io/api/dogs?_sort<span class="o">=</span>-age
 </pre></div>
 </td></tr></table></div>
 <input name="__tabs_2" type="radio" id="__tab_2_1" />
@@ -848,7 +884,7 @@
 8
 9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://pet-demo.machinable.io/collections/dogs?_sort=-age&quot;</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://pet-demo.machinable.io/api/dogs?_sort=-age&quot;</span>
 
 <span class="n">headers</span> <span class="o">=</span> <span class="p">{}</span>
 
@@ -881,7 +917,7 @@
   <span class="p">}</span>
 <span class="p">});</span>
 
-<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="s2">&quot;https://pet-demo.machinable.io/collections/dogs?_sort=-age&quot;</span><span class="p">);</span>
+<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="s2">&quot;https://pet-demo.machinable.io/api/dogs?_sort=-age&quot;</span><span class="p">);</span>
 
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
 </pre></div>
@@ -919,7 +955,7 @@
 
 <span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
 
-    <span class="nx">url</span> <span class="o">:=</span> <span class="s">&quot;https://pet-demo.machinable.io/collections/dogs?_sort=-age&quot;</span>
+    <span class="nx">url</span> <span class="o">:=</span> <span class="s">&quot;https://pet-demo.machinable.io/api/dogs?_sort=-age&quot;</span>
 
     <span class="nx">req</span><span class="p">,</span> <span class="nx">_</span> <span class="o">:=</span> <span class="nx">http</span><span class="p">.</span><span class="nx">NewRequest</span><span class="p">(</span><span class="s">&quot;GET&quot;</span><span class="p">,</span> <span class="nx">url</span><span class="p">,</span> <span class="kc">nil</span><span class="p">)</span>
 
@@ -995,7 +1031,7 @@
         <span class="p">}</span>
     <span class="p">],</span>
     <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="s2">&quot;https://pet-demo.machinable.io/collections/dogs?_limit=10&amp;_offset=0&amp;_sort=-age&quot;</span>
+        <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="s2">&quot;https://pet-demo.machinable.io/api/dogs?_limit=10&amp;_offset=0&amp;_sort=-age&quot;</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
