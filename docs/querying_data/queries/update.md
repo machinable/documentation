@@ -1,7 +1,7 @@
 
 ```bash tab="Bash"
 curl -X PUT \
-  https://pet-demo.machinable.io/collections/dogs/5c869da3a7748bb224833f5c \
+  https://pet-demo.machinable.io/api/dogs/5c869da3a7748bb224833f5c \
   -d '{
         "age": 9,
         "name": "Maximilian"
@@ -11,7 +11,7 @@ curl -X PUT \
 ```python tab="Python"
 import requests
 
-url = "https://pet-demo.machinable.io/collections/dogs/5c869da3a7748bb224833f5c"
+url = "https://pet-demo.machinable.io/api/dogs/5c869da3a7748bb224833f5c"
 
 payload = "{\n    \"age\": 9,\n    \"name\": \"Maximilian\"\n}"
 headers = {}
@@ -32,7 +32,7 @@ xhr.addEventListener("readystatechange", function () {
   }
 });
 
-xhr.open("PUT", "https://pet-demo.machinable.io/collections/dogs/5c869da3a7748bb224833f5c");
+xhr.open("PUT", "https://pet-demo.machinable.io/api/dogs/5c869da3a7748bb224833f5c");
 
 xhr.send(data);
 ```
@@ -49,7 +49,7 @@ import (
 
 func main() {
 
-	url := "https://pet-demo.machinable.io/collections/dogs/5c869da3a7748bb224833f5c"
+	url := "https://pet-demo.machinable.io/api/dogs/5c869da3a7748bb224833f5c"
 
 	payload := strings.NewReader("{\n    \"age\": 9,\n    \"name\": \"Maximilian\"\n}")
 

@@ -2,7 +2,7 @@
 
 A Machinable Project is a place to create and organize your application's API Resources, Collections of data, Users, and API Keys. Projects are created and managed by a Project Administrator. A project will have a unique hostname, `{project-slug}.machinable.io`, that will provide access to the project's resources.
 
-![projects](../img/projects.png "Projects")
+![projects](../img/final/project_list.png "Projects")
 
 ## Use Cases
 

@@ -13,11 +13,11 @@ Project Users are intended to be end users of your Machinable Project. They are 
 
 To create a new Project User navigate to your Project's `Access > Users` page.
 
-![empty users](../img/access.png "No Users")
+![empty users](../img/final/user_list.png "No Users")
 
 Click the `Create A User` button to open the new user modal and enter the new user's information.
 
-![new users](../img/new_user.png "New User")
+![new users](../img/final/new_user.png "New User")
 
 **Username**
 
@@ -37,9 +37,9 @@ The User's Access will determine how they can interact with the data. `Read` wil
 
 To edit a User's Role & Access, click the ellipsis button for that user and select `Edit Access`.
 
-![edit users](../img/edit_user_access.png "Edit User")
+![edit users](../img/final/edit_list_user.png "Edit User")
 
-![edit users](../img/update_user.png "Edit User")
+![edit users](../img/final/edit_user.png "Edit User")
 
 ### Authentication
 
@@ -157,11 +157,11 @@ Project API Keys are intended to be used by other software/machines. They can be
 
 To create a new Project API Key navigate to your Project's `Access > API Keys` page.
 
-![empty api keys](../img/api_keys.png "No API Keys")
+![empty api keys](../img/final/api_keys.png "No API Keys")
 
 Click the `Generate API Token` button to open the new API Key modal and enter the API Key's information.
 
-![new api keys](../img/new_apikey.png "New API Key")
+![new api keys](../img/final/new_key.png "New API Key")
 
 **Generated Key**
 
@@ -183,9 +183,9 @@ The API Key's Access will determine how it can interact with the data. `Read` wi
 
 To edit an API Key's Role & Access, click the ellipsis button for that API Key and select `Edit Access`.
 
-![edit api keys](../img/edit_apikey.png "Edit API Key")
+![edit api keys](../img/final/edit_key_list.png "Edit API Key")
 
-![edit api keys](../img/edit_apikey_modal.png "Edit API Key")
+![edit api keys](../img/final/edit_key.png "Edit API Key")
 
 ### Authentication
 

@@ -1,7 +1,7 @@
-Query results from API Resources and Collections can be sorted based on a field in ascending or descending order. To sort query results, provide the `_sort` query parameter set to the field to sort on. Prefix the field with a dash (`-`) to sort in descending order.
+Query results from API Resources can be sorted based on a field in ascending or descending order. To sort query results, provide the `_sort` query parameter set to the field to sort on. Prefix the field with a dash (`-`) to sort in descending order.
 
 !!! note
-    The `_sort` query parameter is a reserved field that cannot be used in API Resource or Collection data fields.
+    The `_sort` query parameter is a reserved field that cannot be used in API Resource data fields.
 
 ### Ascending
 

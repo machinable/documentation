@@ -1,6 +1,4 @@
-Machinable's main feature is the ability to perform CRUD (Create, Read, Update, Delete) operations on your project's API Resource and Collection endpoints.
-
-API Resources and Collections use the same syntax when performing CRUD operations. The only difference between the two is API Resources will return `400 Bad Request` when creating an object that does not match the defined JSON Schema. 
+Machinable's main feature is the ability to perform CRUD (Create, Read, Update, Delete) operations on your project's API Resource endpoints. API Resources provide data validation based on the JSON schema.
 
 
 !!! note
@@ -125,30 +123,30 @@ Authorization: bearer {access_token}
 
 ## Create
 
-Create and store a new object in a specific Collection or API Resource.
+Create and store a new object in a specific API Resource.
 
 !!! note
-    These examples are managing data within a **Collection** called `dogs` (`/collections/dogs`). These requests could also manage data within an **API Resource** called `dogs` at `/api/dogs`, given the correct JSON schema is defined.
+    These examples are managing data within an **API Resource** called `dogs` at `/api/dogs`, given the correct JSON schema is defined.
 
 {!querying_data/queries/create.md!}
 
 ## Read
 
-Retrieve a single object from a collection or list all objects that exist (paginated).
+Retrieve a single object from a resource or list all objects that exist (paginated).
 
 ### Retrieve single object
 
-To retrieve a single object, make a `GET` request to the collection with the ID of the object as the last path parameter.
+To retrieve a single object, make a `GET` request to the resource with the ID of the object as the last path parameter.
 
 {!querying_data/queries/get.md!}
 
 ### List objects
 
-To retrieve a paginated list of objects for this collection, make a `GET` request to the collection.
+To retrieve a paginated list of objects for this resource, make a `GET` request to the resource.
 
 {!querying_data/queries/list.md!}
 
-Notice the collection objects are returned as a list in the `items` key. A maximum of 10 objects will be returned by default. 
+Notice the resource objects are returned as a list in the `items` key. A maximum of 10 objects will be returned by default. 
 
 See [Pagination](/documentation/querying_data/pagination) for more information regarding the page limit as well as the other keys in the root of the response JSON.
 

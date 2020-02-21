@@ -1,13 +1,13 @@
 
 ```bash tab="Bash"
 curl -X GET \
-  https://pet-demo.machinable.io/collections/dogs/5c869da3a7748bb224833f5c
+  https://pet-demo.machinable.io/api/dogs/5c869da3a7748bb224833f5c
 ```
 
 ```python tab="Python"
 import requests
 
-url = "https://pet-demo.machinable.io/collections/dogs/5c869da3a7748bb224833f5c"
+url = "https://pet-demo.machinable.io/api/dogs/5c869da3a7748bb224833f5c"
 
 headers = {}
 
@@ -27,7 +27,7 @@ xhr.addEventListener("readystatechange", function () {
   }
 });
 
-xhr.open("GET", "https://pet-demo.machinable.io/collections/dogs/5c869da3a7748bb224833f5c");
+xhr.open("GET", "https://pet-demo.machinable.io/api/dogs/5c869da3a7748bb224833f5c");
 
 xhr.send(data);
 ```
@@ -43,7 +43,7 @@ import (
 
 func main() {
 
-	url := "https://pet-demo.machinable.io/collections/dogs/5c869da3a7748bb224833f5c"
+	url := "https://pet-demo.machinable.io/api/dogs/5c869da3a7748bb224833f5c"
 
 	req, _ := http.NewRequest("GET", url, nil)
 
