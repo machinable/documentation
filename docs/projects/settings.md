@@ -1,6 +1,6 @@
 Project settings can be accessed by navigating to the `Settings` tab of the project. This page provides the Project Administrators with the Project Name and Hostnames, both of which can be copied to clipboard by clicking the `Copy` button.
 
-![project settings](../img/settings.png "Project Settings")
+![project settings](../img/final/settings.png "Project Settings")
 
 The project settings page also exposes the option to enable and disable project Authentication, as well as an option to delete the project
 
@@ -11,7 +11,7 @@ This flag is a project level setting that determines whether users can openly re
 ## Delete Project
 
 !!! danger
-    Deleting a Project will delete all related data including API Resources, Collections and their associated data, Project Users, API Keys, Logs, and Sessions. **This is a permanent action that can not be undone**.
+    Deleting a Project will delete all related data including API Resources, Key/Values and their associated data, Project Users, API Keys, Logs, and Sessions. **This is a permanent action that can not be undone**.
 
 To delete a project:
 

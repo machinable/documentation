@@ -1,12 +1,12 @@
-When making calls to Machinable API Resources or Collections, there may be a ton of results to return, depending on your use case. In order to keep response sizes small and more manageable, results are returned as a paginated list.
+When making calls to Machinable API Resources, there may be a ton of results to return, depending on your use case. In order to keep response sizes small and more manageable, results are returned as a paginated list.
 
-Take a look at the response of the following list operation to the `dogs` Collection in our `Pet Demo` project:
+Take a look at the response of the following list operation to the `dogs` API Resource in our `Pet Demo` project:
 
 {!querying_data/queries/list.md!}
 
 As you can see, there are **3** keys at the root of the JSON response; `count`, `links`, and `items`.
 
-**count** is the total count of results for the query. Based on our request, we now know there are a total of 2 dogs in the `dogs` collection because we are not filtering the data in any way.
+**count** is the total count of results for the query. Based on our request, we now know there are a total of 2 dogs in the `dogs` resource because we are not filtering the data in any way.
 
 **links** provides context to what URLs we can request to traverse forward or backward through the paginated results.
 
@@ -21,7 +21,7 @@ If we specify `_limit` of `1`, we will only get the first result of the `dogs` o
 {!querying_data/queries/list.1.md!}
 
 !!! info
-    The `_limit` query parameter is a reserved field that cannot be used in API Resource or Collection data fields.
+    The `_limit` query parameter is a reserved field that cannot be used in API Resource data fields.
 
     The `_limit` query parameter has the following constraints:
 
@@ -33,12 +33,12 @@ If we specify `_limit` of `1`, we will only get the first result of the `dogs` o
 
 `_offset` is a query parameter that can be used to specify how many results to skip before the response payload is built and returned. If we take a look at our sample request above, we'll see that we are not specifying an offset, so Machinable will default the offset to 0, giving us the first page of the results.
 
-If we continue to build off of the request in our example and provide an `_offset` of `1` with a `_limit` of `1`, we will get the second "page" of results. Since there are only `2` dogs in the collection, the second page will be the last page:
+If we continue to build off of the request in our example and provide an `_offset` of `1` with a `_limit` of `1`, we will get the second "page" of results. Since there are only `2` dogs in the resource, the second page will be the last page:
 
 {!querying_data/queries/list.2.md!}
 
 !!! info
-    The `_offset` query parameter is a reserved field that cannot be used in API Resource or Collection data fields.
+    The `_offset` query parameter is a reserved field that cannot be used in API Resource data fields.
 
     The `_offset` query parameter has the following constraints:
 
